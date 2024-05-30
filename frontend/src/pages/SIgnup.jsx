@@ -3,13 +3,12 @@ import { IoManSharp } from "react-icons/io5";
 import { FaRegEyeSlash, FaEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-function LoginPage() {
+function SIgnup() {
   const [showPassword, setSHowPassword] = useState(true);
+  const [showConfirmPassword, setshowConfirmPassword] = useState(true);
   return (
     <div className="bg-white mx-auto max-w-sm p-4 mt-14 flex flex-col rounded-xl">
-      <div className="mx-auto">
-        <IoManSharp className="text-7xl" />
-      </div>
+      <div className="mx-auto"></div>
       <form action="" className="relative">
         <div>
           <label>email : </label>
@@ -28,7 +27,6 @@ function LoginPage() {
               placeholder="enter password"
               className="p-2 w-full border rounded-md my-2 focus:outline-none focus:bg-slate-50 no-password-reveal "
             />
-
             {/* logic for toggoling showPassword */}
             {showPassword ? (
               <FaRegEyeSlash
@@ -48,27 +46,39 @@ function LoginPage() {
           </div>
         </div>
 
-        <input
-          type="submit"
-          className="bg-red-500 p-2 rounded-md text-white hover:bg-red-600 mt-2"
-        />
-        <Link
-          to={"/forget"}
-          className="text-blue-700 absolute right-0 bottom-9"
-        >
-          forget password
-        </Link>
+        <div>
+          <label> confirm password : </label>
+          <div className="relative">
+            <input
+              type={showConfirmPassword ? "text" : "password"}
+              placeholder="enter password"
+              className="p-2 w-full border rounded-md my-2 focus:outline-none focus:bg-slate-50 no-password-reveal "
+            />
+            {/* logic for toggoling showConfirmPassword */}
+            {showConfirmPassword ? (
+              <FaRegEyeSlash
+                className="absolute top-5 right-3 cursor-pointer "
+                onClick={() => {
+                  setshowConfirmPassword(false);
+                }}
+              />
+            ) : (
+              <FaEye
+                className="absolute top-5 right-3 cursor-pointer "
+                onClick={() => {
+                  setshowConfirmPassword(true);
+                }}
+              />
+            )}
+          </div>
+        </div>
+
+        <button className="bg-red-500 p-2 rounded-md text-white hover:bg-red-600 mt-2">
+          create account
+        </button>
       </form>
-
-      <div className="flex gap-2 mt-2">
-        <p>dont have a account?</p>
-        <Link to={"/signup"} className="text-red-500 gap-3">
-          register
-        </Link>
-      </div>
-
     </div>
   );
 }
 
-export default LoginPage;
+export default SIgnup;

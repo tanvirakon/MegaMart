@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    @apply bg-slate-100
+body {
+  @apply bg-slate-100;
+}
+/* manually turned off the default behavior of password field; it doesnt have that eye butttun anymore. i have done it manuaaly*/
+.no-password-reveal::-ms-reveal {
+  display: none;
+}
+
+.no-password-reveal::-webkit-textfield-decoration-container {
+  display: none;
 }
