@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import { FaSearchengin } from "react-icons/fa6";
 import { FaRegUserCircle } from "react-icons/fa";
 import { BsCart4 } from "react-icons/bs";
+
 function Navbar() {
   return (
     <div className="flex items-center  justify-between p-4 rounded-lg shadow-md ">
       <div className="ml-10">
-        <Link to="/">
+        <Link to="/login">
           <img src="./src/images/logo.jpeg" alt="" className="h-[50px]" />
         </Link>
       </div>

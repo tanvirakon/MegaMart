@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Footer() {
   return (
-    <div>Footer</div>
-  )
+    <footer className="bg-red-200 ">
+      <div className="p-3  text-center">Nulla mollit sit ut laboinullamco</div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
