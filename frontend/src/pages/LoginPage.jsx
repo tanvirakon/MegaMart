@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { IoManSharp } from "react-icons/io5";
 import { FaRegEyeSlash, FaEye } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 
 function LoginPage() {
+  const navigate = useNavigate();
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -29,13 +30,14 @@ function LoginPage() {
     };
     const res = await axios.post(
       "http://localhost:3000/api/canlogin",
-      loginData
+      loginData,
+      { withCredentials: "include" }
     );
     if (res.data.data) {
       toast.success(res.data.message);
       console.log("front", res);
-    }
-    else  toast.error(res.data.message);
+      navigate("/");
+    } else toast.error(res.data.message);
   };
   return (
     <div className="bg-white mx-auto max-w-sm p-4 mt-14 flex flex-col rounded-xl ">

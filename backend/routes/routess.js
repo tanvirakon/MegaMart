@@ -1,6 +1,9 @@
+import "dotenv/config";
 import express from "express";
 import md5 from "md5";
 import userRegisterModel from "../models/userRegisterModel.js";
+import jsonwebtoken from "jsonwebtoken";
+
 const router = express.Router();
 
 router.post("/signup", async (req, res) => {
@@ -27,13 +30,28 @@ router.post("/canlogin", async (req, res) => {
     email: email,
   });
   if (findUser) {
-    if (findUser.password == md5(password))
-      res.send({
-        data: findUser,
+    if (findUser.password == md5(password)) {
+      const token = await jsonwebtoken.sign(
+        {
+          id: findUser.id,
+          name: findUser.name,
+          email: findUser.email,
+          password: findUser.password,
+          picture: findUser.picture,
+        },
+        process.env.token_secret,
+        { expiresIn: 60 * 60 * 8 }
+      );
+      res.cookie("token", token).json({
+        data: token,
         message: "logged in",
       });
-    else res.send({ message: "password doenst match" });
+    } else res.send({ message: "password doenst match" });
   } else res.send({ message: "email not found" });
 });
+
+// router.get("/emnei", auth, (req, res) => {
+//   console.log("OHAIYO");
+// });
 
 export default router;

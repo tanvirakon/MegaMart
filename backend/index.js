@@ -4,17 +4,25 @@ import mongoose from "mongoose";
 import { mongodbURL, port } from "./config.js";
 import router from "./routes/routess.js";
 import cors from "cors";
+import cookieParser from "cookie-parser";
+import auth from "./middleware/authToken.js";
 
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors());
-app.use("/api", router);
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
 
-app.get("/", (req, res) => {
-  res.send("moshi moshi");
+app.use(cookieParser());
+app.get("/secret", auth, (req, res) => {
+  res.send("Secret Information");
 });
+app.use("/api", router);
 
 mongoose
   .connect(mongodbURL)
