@@ -4,6 +4,7 @@ import { FaSearchengin } from "react-icons/fa6";
 import { FaRegUserCircle } from "react-icons/fa";
 import { BsCart4 } from "react-icons/bs";
 
+
 function Navbar() {
   return (
     <div className="flex items-center  justify-between p-4 rounded-lg shadow-md ">
@@ -25,6 +26,15 @@ function Navbar() {
       <div className="mr-10">
         <ul className="flex gap-10">
           <li>
+            {/* {user ? (
+              <img
+                src={pictureUrl}
+                alt="User"
+                style={{ width: "40px", height: "40px", borderRadius: "50%" }}
+              />
+            ) : (
+              <FaRegUserCircle />
+            )} */}
             <Link to="">
               <FaRegUserCircle className="text-2xl" />
             </Link>

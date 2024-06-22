@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { IoManSharp } from "react-icons/io5";
 import { FaRegEyeSlash, FaEye } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
+import context from "../../context/context";
 
 function LoginPage() {
+  const { fetchUserData } = useContext(context); //fetchUserData
+  console.log("fetchUserData", fetchUserData);
+
   const navigate = useNavigate();
   const [data, setData] = useState({
     email: "",
@@ -29,14 +33,15 @@ function LoginPage() {
       password: data.password,
     };
     const res = await axios.post(
-      "http://localhost:3000/api/canlogin",
+      "http://localhost:3000/api/canlogin", //login + token generate
       loginData,
       { withCredentials: "include" }
     );
     if (res.data.data) {
       toast.success(res.data.message);
-      console.log("front", res);
+      console.log("front", res.data);
       navigate("/");
+      fetchUserData();
     } else toast.error(res.data.message);
   };
   return (

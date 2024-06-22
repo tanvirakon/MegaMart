@@ -37,7 +37,7 @@ router.post("/canlogin", async (req, res) => {
           name: findUser.name,
           email: findUser.email,
           password: findUser.password,
-          picture: findUser.picture,
+          // picture: findUser.picture,
         },
         process.env.token_secret,
         { expiresIn: 60 * 60 * 8 }

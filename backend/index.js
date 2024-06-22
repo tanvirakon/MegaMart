@@ -9,6 +9,7 @@ import auth from "./middleware/authToken.js";
 
 const app = express();
 
+app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
@@ -18,10 +19,8 @@ app.use(
   })
 );
 
-app.use(cookieParser());
-app.get("/secret", auth, (req, res) => {
-  res.send("Secret Information");
-});
+app.get("/secret", auth);
+
 app.use("/api", router);
 
 mongoose
