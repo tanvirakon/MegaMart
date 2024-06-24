@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { FaSearchengin } from "react-icons/fa6";
 import { FaRegUserCircle } from "react-icons/fa";
 import { BsCart4 } from "react-icons/bs";
-
+import { useSelector } from "react-redux";
+import LogoutButton from "../pages/LogoutPage";
 
 function Navbar() {
+  const { user } = useSelector((state) => state.user);
   return (
     <div className="flex items-center  justify-between p-4 rounded-lg shadow-md ">
       <div className="ml-10">
@@ -26,18 +28,15 @@ function Navbar() {
       <div className="mr-10">
         <ul className="flex gap-10">
           <li>
-            {/* {user ? (
+            {user ? (
               <img
-                src={pictureUrl}
-                alt="User"
-                style={{ width: "40px", height: "40px", borderRadius: "50%" }}
+                src={user.picture}
+                alt={user.name}
+                className="size-8 rounded-full"
               />
             ) : (
-              <FaRegUserCircle />
-            )} */}
-            <Link to="">
               <FaRegUserCircle className="text-2xl" />
-            </Link>
+            )}
           </li>
           <li className="relative">
             <Link to="">
@@ -48,12 +47,16 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link
-              to="/login"
-              className="bg-red-500 px-2 py-1 rounded-full text-white hover:bg-red-600"
-            >
-              Login
-            </Link>
+            {user ? (
+              <LogoutButton />
+            ) : (
+              <Link
+                to="/login"
+                className="bg-red-500 px-2 py-1 rounded-full text-white hover:bg-red-600"
+              >
+                Login
+              </Link>
+            )}
           </li>
         </ul>
       </div>

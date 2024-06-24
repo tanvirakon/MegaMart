@@ -1,16 +1,19 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import { Routes, Route } from "react-router-dom";
-import LoginPage from "./pages/LoginPage";
-import Forget from "./pages/Forget";
-import Signup from "./pages/SIgnup";
+import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import context from "../context/context";
-import axios from "axios";
+import context from "./assets/context/context";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Forget from "./pages/Forget";
+import LoginPage from "./pages/LoginPage";
+import Signup from "./pages/SIgnup";
+import { useDispatch } from "react-redux";
+import { setUserDetails } from "./store/userSlice";
 
 function App() {
+  const dispatch = useDispatch();
   const [user, setUser] = useState(null);
   const fetchUserData = async () => {
     try {
@@ -19,6 +22,7 @@ function App() {
       });
       setUser(res.data);
       console.log("res.data", res.data);
+      dispatch(setUserDetails(res.data));
     } catch (error) {
       console.error("Failed to fetch user data:", error.message);
     }
@@ -30,7 +34,7 @@ function App() {
 
   return (
     <div>
-      <context.Provider value={{fetchUserData}}>
+      <context.Provider value={{ fetchUserData }}>
         <ToastContainer />
         <Navbar />
         <Routes>

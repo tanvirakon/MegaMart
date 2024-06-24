@@ -1,10 +1,10 @@
-import React, { useContext, useState } from "react";
-import { IoManSharp } from "react-icons/io5";
-import { FaRegEyeSlash, FaEye } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import React, { useContext, useState } from "react";
+import { FaEye, FaRegEyeSlash } from "react-icons/fa";
+import { IoManSharp } from "react-icons/io5";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import context from "../../context/context";
+import context from "../assets/context/context";
 
 function LoginPage() {
   const { fetchUserData } = useContext(context); //fetchUserData

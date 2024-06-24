@@ -37,10 +37,9 @@ router.post("/canlogin", async (req, res) => {
           name: findUser.name,
           email: findUser.email,
           password: findUser.password,
-          // picture: findUser.picture,
         },
         process.env.token_secret,
-        { expiresIn: 60 * 60 * 8 }
+        {}
       );
       res.cookie("token", token).json({
         data: token,
@@ -50,8 +49,15 @@ router.post("/canlogin", async (req, res) => {
   } else res.send({ message: "email not found" });
 });
 
-// router.get("/emnei", auth, (req, res) => {
-//   console.log("OHAIYO");
-// });
+router.get("/logout", async (req, res) => {
+  try {
+    res.clearCookie("token");
+    res.json({
+      message: "logout successfull",
+    });
+  } catch (error) {
+    res.send(error.message || error);
+  }
+});
 
 export default router;

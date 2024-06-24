@@ -3,7 +3,7 @@ import { FaRegEyeSlash, FaEye } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
-import imageTobase64 from "../../helper/image64";
+import imageTobase64 from "../helper/image64";
 
 function Signup() {
   const navigate = useNavigate();
