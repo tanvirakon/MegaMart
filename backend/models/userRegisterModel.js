@@ -19,6 +19,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       // required: true,
     },
+    role: String,
   },
   {
     timestamps: true,
@@ -28,4 +29,3 @@ const userSchema = new mongoose.Schema(
 const userRegisterModel = mongoose.model("signup", userSchema);
 
 export default userRegisterModel;
-

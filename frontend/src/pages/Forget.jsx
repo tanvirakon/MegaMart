@@ -1,7 +1,7 @@
 import axios from "axios";
 
-async function Forget() {
-  return <div>Forget</div>;
+function Forget() {
+  return <div>Forget page</div>;
 }
 
 export default Forget;

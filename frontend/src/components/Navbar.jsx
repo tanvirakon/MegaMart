@@ -1,17 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { FaSearchengin } from "react-icons/fa6";
-import { FaRegUserCircle } from "react-icons/fa";
+import React, { useState } from "react";
 import { BsCart4 } from "react-icons/bs";
+import { FaRegUserCircle } from "react-icons/fa";
+import { FaSearchengin } from "react-icons/fa6";
 import { useSelector } from "react-redux";
-import LogoutButton from "../pages/LogoutPage";
+import { Link } from "react-router-dom";
+import Logout from "../pages/LogoutPage";
 
 function Navbar() {
-  const { user } = useSelector((state) => state.user);
+  const { userInfo } = useSelector((state) => state.user); //reducer r name chilo "user" in store.js
+  // app.js ei setUserDetails() e value set krclm
+  const [adminPopup, setAdminPopup] = useState(false);
   return (
-    <div className="flex items-center  justify-between p-4 rounded-lg shadow-md ">
+    <div className="flex items-center justify-between p-4 rounded-lg shadow-md ">
       <div className="ml-10">
-        <Link to="/login">
+        <Link to="/">
           <img src="./src/images/logo.jpeg" alt="" className="h-[50px]" />
         </Link>
       </div>
@@ -28,15 +30,47 @@ function Navbar() {
       <div className="mr-10">
         <ul className="flex gap-10">
           <li>
-            {user ? (
-              <img
-                src={user.picture}
-                alt={user.name}
-                className="size-8 rounded-full"
-              />
-            ) : (
-              <FaRegUserCircle className="text-2xl" />
-            )}
+            <div className="relative flex justify-center">
+              <div>
+                {/* jdi login hy then -> jdi pic thake pic show, na tkle icon show..login na hle kno kisui na */}
+                {userInfo &&
+                  (userInfo?.picture ? (
+                    <img
+                      src={userInfo.picture}
+                      alt={userInfo.name}
+                      className="size-8 rounded-full cursor-pointer"
+                      onClick={() => {
+                        setAdminPopup((prev) => {
+                          return (prev = !prev);
+                        });
+                      }}
+                    />
+                  ) : (
+                    <FaRegUserCircle
+                      className="text-2xl cursor-pointer"
+                      onClick={() => {
+                        setAdminPopup((prev) => {
+                          return (prev = !prev);
+                        });
+                      }}
+                    />
+                  ))}
+              </div>
+              {userInfo?.role === "admin" && adminPopup && (
+                // admin na dle access dbe na
+                <div className="absolute bg-white p-3 top-10 whitespace-nowrap rounded shadow-md max-md:hidden">
+                  <Link
+                    to="/admin-panel"
+                    className="hover:bg-slate-100 p-2"
+                    onClick={() => {
+                      setAdminPopup((prev) => !prev);
+                    }}
+                  >
+                    Admin panel
+                  </Link>
+                </div>
+              )}
+            </div>
           </li>
           <li className="relative">
             <Link to="">
@@ -47,8 +81,8 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            {user ? (
-              <LogoutButton />
+            {userInfo ? (
+              <Logout />
             ) : (
               <Link
                 to="/login"

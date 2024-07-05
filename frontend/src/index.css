@@ -13,3 +13,6 @@ body {
 .no-password-reveal::-webkit-textfield-decoration-container {
   display: none;
 }
+.customShadow{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+}

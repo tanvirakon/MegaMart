@@ -1,16 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  user: null,
+  userInfo: null,
 };
 
 export const userSlice = createSlice({
-  name: "user",
-  initialState,
+  name: "user's information", //helpful but not necessary
+  initialState, //oi onshotuk vitreo dea jto..but eta slick
   reducers: {
     setUserDetails: (state, action) => {
-      state.user = action.payload;
-      console.log("action.pyload ", action.payload);
+      state.userInfo = action.payload;
+      // console.log("action.pyload ", action.payload);
     },
   },
 });

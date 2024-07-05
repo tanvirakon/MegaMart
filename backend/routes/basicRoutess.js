@@ -8,13 +8,15 @@ const router = express.Router();
 
 router.post("/signup", async (req, res) => {
   try {
-    let { name, email, password, picture } = req.body;
+    let { name, email, password, picture, role } = req.body;
     password = md5(password);
+    role = "general";
 
     const userData = {
       name,
       email,
       password,
+      role,
       picture,
     };
     const newUser = await userRegisterModel.create(userData);
@@ -39,7 +41,7 @@ router.post("/canlogin", async (req, res) => {
           password: findUser.password,
         },
         process.env.token_secret,
-        {}
+        {} //for unlimited time
       );
       res.cookie("token", token).json({
         data: token,

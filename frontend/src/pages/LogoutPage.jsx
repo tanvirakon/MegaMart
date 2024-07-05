@@ -5,20 +5,17 @@ import { toast } from "react-toastify";
 
 const LogoutButton = () => {
   const dispatch = useDispatch();
-
   const handleLogout = async () => {
     try {
       const clearCookie = await axios.get("http://localhost:3000/api/logout", {
         withCredentials: "include",
       });
       toast.success(clearCookie.data.message);
-
-      dispatch(setUserDetails(null));
+      dispatch(setUserDetails(null)); //rerender kre like useState hook...na dile manually re render kra lgbe
     } catch (error) {
       console.error("Logout error:", error.message || error);
     }
   };
-
   return (
     <button
       onClick={handleLogout}
@@ -28,5 +25,4 @@ const LogoutButton = () => {
     </button>
   );
 };
-
 export default LogoutButton;

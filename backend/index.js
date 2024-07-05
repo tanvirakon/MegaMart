@@ -2,10 +2,13 @@ import bodyParser from "body-parser";
 import express from "express";
 import mongoose from "mongoose";
 import { mongodbURL, port } from "./config.js";
-import router from "./routes/routess.js";
+import basicRouter from "./routes/basicRoutess.js";
+import allUserRouter from "./routes/allUser.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import auth from "./middleware/authToken.js";
+import updateUserROleRoute from "./routes/updateUser.js";
+import storeProductRouter from "./routes/storeProduct.js";
 
 const app = express();
 
@@ -21,7 +24,10 @@ app.use(
 
 app.get("/secret", auth);
 
-app.use("/api", router);
+app.use("/api", basicRouter);
+app.use("/all_user", allUserRouter);
+app.use("/update_role", updateUserROleRoute);
+app.use("/upload_product", storeProductRouter);
 
 mongoose
   .connect(mongodbURL)

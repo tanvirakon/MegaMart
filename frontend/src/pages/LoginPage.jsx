@@ -7,8 +7,7 @@ import { toast } from "react-toastify";
 import context from "../assets/context/context";
 
 function LoginPage() {
-  const { fetchUserData } = useContext(context); //fetchUserData
-  console.log("fetchUserData", fetchUserData);
+  const { fetchUserData } = useContext(context); //fetchUserData function ta asbe
 
   const navigate = useNavigate();
   const [data, setData] = useState({
@@ -39,7 +38,7 @@ function LoginPage() {
     );
     if (res.data.data) {
       toast.success(res.data.message);
-      console.log("front", res.data);
+      // console.log("front", res.data);
       navigate("/");
       fetchUserData();
     } else toast.error(res.data.message);

@@ -17,8 +17,6 @@ function Signup() {
 
   function newEntry(e) {
     const { value, name } = e.target;
-    // console.log("value", value);
-    // console.log("name", name);
     setData((prev) => {
       return {
         ...prev,
@@ -30,7 +28,6 @@ function Signup() {
   const handleUploadPic = async (e) => {
     const file = e.target.files[0];
     const imagePic = await imageTobase64(file);
-    // console.log("imagePic", imagePic);
     setData((prev) => {
       return {
         ...prev,
@@ -42,7 +39,6 @@ function Signup() {
   const formSubmit = async (e) => {
     e.preventDefault();
     if (data.password == data.confirmPassword) {
-      console.log("data.pic", data.picture);
       const userData = {
         name: data.name,
         email: data.email,
