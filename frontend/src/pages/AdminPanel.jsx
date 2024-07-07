@@ -13,7 +13,7 @@ function AdminPanel() {
   // admin logout krlei home e redirect hye jbe
   return (
     <div className="flex px-4 mt-4 min-h-[710px] max-md:hidden">
-      <aside className="bg-white w-80 p-3 flex customShadow flex-col">
+      <aside className="bg-white w-80 p-3 flex customShadow flex-col h-[690px] rounded-lg">
         {/* shadow doesnt work */}
         <div className=" flex justify-center">
           {userInfo ? (

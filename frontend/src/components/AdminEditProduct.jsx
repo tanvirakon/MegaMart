@@ -1,5 +1,4 @@
-// choto pic tip dle boro dekhay seta baki rkc 6:43
-// pic map hye div e dekhate time lge..oi time ty spinner dekhabo
+// modal khule pc dlt kre , submit na krleo oita dlt ii thake...bugg fixx
 import React, { useRef, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import productCategory from "../helper/productCategory.js";
@@ -8,17 +7,15 @@ import uploadProductImages from "../helper/uploadProductImages.js";
 import { MdDelete } from "react-icons/md";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { useSelector } from "react-redux";
 
-const UploadProductModal = ({ onclose, fetchAllProduct }) => {
-  const { userInfo } = useSelector((state) => state.user);
+const AdminEditProduct = ({ data, onclose, fetchAllProduct }) => {
   const [productData, setProductData] = useState({
-    productName: "",
-    brandName: "",
-    description: "",
-    productImage: [],
-    category: "",
-    price: "",
+    productName: data.productName,
+    brandName: data.brandName,
+    description: data.description,
+    productImage: data.productImage || [],
+    category: data.category,
+    price: data.price,
   });
   const handleChange = (e) => {
     const { value, name } = e.target;
@@ -40,7 +37,6 @@ const UploadProductModal = ({ onclose, fetchAllProduct }) => {
     });
   };
   const dltPic = (index) => {
-    console.log(index);
     const newImageArray = productData.productImage;
     newImageArray.splice(index, 1);
     setProductData((prev) => {
@@ -52,19 +48,19 @@ const UploadProductModal = ({ onclose, fetchAllProduct }) => {
   };
   const formSubmit = async (e) => {
     e.preventDefault();
-    if (userInfo.role == "admin") {
-      await axios
-        .post("http://localhost:3000/product/upload", productData)
-        .then((res) => {
-          console.log(res.data);
-          toast.success(res.data.message);
-          fetchAllProduct();
-        })
-        .catch((err) => {
-          console.log(err);
-          toast.error("error occured. check console!!");
-        });
-    } else toast.error("you are not admin");
+    await axios
+      .put(
+        `http://localhost:3000/product/update_product/${data._id}`,
+        productData
+      )
+      .then((res) => {
+        toast.success(res.data.message);
+        fetchAllProduct();
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error("error occured. check console!!");
+      });
     onclose();
   };
   const modalRef = useRef();
@@ -82,7 +78,7 @@ const UploadProductModal = ({ onclose, fetchAllProduct }) => {
           className="absolute right-6 text-red-400 cursor-pointer"
           onClick={onclose}
         />
-        <h1 className="text-2xl font-semibold">Upload item</h1>
+        <h1 className="text-2xl font-semibold">Edit product</h1>
         <form action="" className="flex flex-col gap-2" onSubmit={formSubmit}>
           <label htmlFor="productName">Product name : </label>
           <input
@@ -118,7 +114,7 @@ const UploadProductModal = ({ onclose, fetchAllProduct }) => {
             className="border p-2 bg-slate-50 rounded"
             onChange={handleChange}
           >
-            <option>select a category</option>
+            <option>{productData.category}</option>
             {productCategory.map((value, id) => (
               <option value={value.value} key={id}>
                 {value.label}
@@ -189,8 +185,8 @@ const UploadProductModal = ({ onclose, fetchAllProduct }) => {
             placeholder="enter product discription"
           ></textarea>
 
-          <button className=" bg-red-400 p-2 rounded-md text-white mt-3">
-            Upload
+          <button className=" bg-red-400 p-2 rounded-md text-white">
+            update product details
           </button>
         </form>
       </div>
@@ -198,4 +194,4 @@ const UploadProductModal = ({ onclose, fetchAllProduct }) => {
   );
 };
 
-export default UploadProductModal;
+export default AdminEditProduct;

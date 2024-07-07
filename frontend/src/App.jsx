@@ -48,8 +48,8 @@ function App() {
             <Route path="/forget" element={<Forget />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="admin-panel" element={<AdminPanel />}>
-              <Route index element={<AllUser />} />
-              {/* by default alluser select hye tkbe */}
+              <Route index element={<AllProducts />} />
+              {/* by default AllProducts select hye tkbe */}
               <Route path="all_user" element={<AllUser />} />
               <Route path="upload_products" element={<AllProducts />} />
             </Route>

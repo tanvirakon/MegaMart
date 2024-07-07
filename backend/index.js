@@ -8,7 +8,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import auth from "./middleware/authToken.js";
 import updateUserROleRoute from "./routes/updateUser.js";
-import storeProductRouter from "./routes/storeProduct.js";
+import storeProductRouter from "./routes/product.js";
 
 const app = express();
 
@@ -27,7 +27,7 @@ app.get("/secret", auth);
 app.use("/api", basicRouter);
 app.use("/all_user", allUserRouter);
 app.use("/update_role", updateUserROleRoute);
-app.use("/upload_product", storeProductRouter);
+app.use("/product", storeProductRouter);
 
 mongoose
   .connect(mongodbURL)
