@@ -13,8 +13,15 @@ function Navbar() {
   return (
     <div className="flex items-center justify-between p-4 rounded-lg shadow-md ">
       <div className="ml-10">
-        <Link to="/">
-          <img src="./src/images/logo.jpeg" alt="" className="h-[50px]" />
+        <Link to="/" className="flex">
+          <img
+            src="./src/images/logo.jpeg"
+            alt=""
+            className="h-[50px] mix-blend-multiply"
+          />
+          <h1 className="text-2xl ml-1 flex justify-center items-center text-green-700 font-serif font-semibold">
+            MegaMart
+          </h1>
         </Link>
       </div>
       <div className="hidden sm:flex items-center ">

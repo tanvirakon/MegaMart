@@ -7,8 +7,9 @@ import allUserRouter from "./routes/allUser.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import auth from "./middleware/authToken.js";
-import updateUserROleRoute from "./routes/updateUser.js";
-import storeProductRouter from "./routes/product.js";
+import updateUserROleRoute from "./routes/updateUserRole.js";
+import ProductRouter from "./routes/product.js";
+import addToCartRouter from "./routes/addToCart.js";
 
 const app = express();
 
@@ -27,7 +28,8 @@ app.get("/secret", auth);
 app.use("/api", basicRouter);
 app.use("/all_user", allUserRouter);
 app.use("/update_role", updateUserROleRoute);
-app.use("/product", storeProductRouter);
+app.use("/product", ProductRouter);
+app.use("/add_to_cart", addToCartRouter);
 
 mongoose
   .connect(mongodbURL)

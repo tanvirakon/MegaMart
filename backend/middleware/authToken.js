@@ -3,10 +3,11 @@ import userRegisterModel from "../models/userRegisterModel.js";
 
 const auth = async (req, res, next) => {
   try {
-    const token = req.cookies.token;
+    const token = req.cookies.token; // logged out tkle token = undefined
     if (!token) {
-      res.status(401).json({
+      res.json({
         message: "user not logged in.0ky?!huh!!",
+        error: true,
       });
     } else {
       jsonwebtoken.verify(
@@ -24,8 +25,9 @@ const auth = async (req, res, next) => {
     }
     // next();
   } catch (error) {
-    res.status(401).json({
+    res.json({
       message: error.message || error,
+      error: true,
     });
   }
 };

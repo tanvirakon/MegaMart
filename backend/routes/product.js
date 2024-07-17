@@ -49,4 +49,52 @@ router.put("/update_product/:id", async (req, res) => {
   }
 });
 
+//get single product of all category for home pge
+router.get("/find-all-category", async (req, res) => {
+  try {
+    const allProductCategory = await productsUploadModel.distinct("category");
+    // only ki ki category ase ta return krbe
+    let allCategoryFirstProduct = [];
+    // https://stackoverflow.com/questions/37576685/using-async-await-with-a-foreach-loop
+    for (const category of allProductCategory) {
+      const product = await productsUploadModel.findOne({ category });
+      allCategoryFirstProduct.push(product);
+    }
+    res.send({
+      data: allCategoryFirstProduct,
+      success: true,
+    });
+  } catch (error) {
+    res.send(error.message || error);
+  }
+});
+
+//get all product of a category for home pge
+router.get("/all-product-single-category/:category", async (req, res) => {
+  try {
+    const { category } = req.params;
+    const product = await productsUploadModel.find({ category });
+    res.send({
+      data: product,
+      success: true,
+    });
+  } catch (error) {
+    res.send(error.message || error);
+  }
+});
+
+// get single product details by its id
+router.get("/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const product = await productsUploadModel.findById(id);
+    res.send({
+      data: product,
+      success: true,
+    });
+  } catch (error) {
+    res.send(error.message || error);
+  }
+});
+
 export default router;

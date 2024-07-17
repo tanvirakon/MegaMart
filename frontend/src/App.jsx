@@ -15,6 +15,8 @@ import AdminPanel from "./pages/AdminPanel";
 import AllUser from "./pages/AllUser";
 import AllProducts from "./pages/AllProducts";
 import Home from "./pages/Home";
+import ProductsByCategory from "./pages/ShowProductsByCategory.jsx";
+import ProductDetails from "./pages/ProductDetails.jsx";
 
 function App() {
   const dispatch = useDispatch();
@@ -24,8 +26,8 @@ function App() {
       const res = await axios.get("http://localhost:3000/secret", {
         withCredentials: true,
       });
-      //console.log("res.data", res.data); //user is logged in
-      dispatch(setUserDetails(res.data)); //reducer e value set kre dlm
+      // console.log("res.data", res.data); //user is logged in
+      if (res?.data) dispatch(setUserDetails(res.data)); //reducer e value set kre dlm
     } catch (error) {
       //console.error("user not logged in; ", error.message); //usr not logged in
     }
@@ -41,7 +43,7 @@ function App() {
       <context.Provider value={{ fetchUserData }}>
         <ToastContainer />
         <Navbar />
-        <div className="flex-grow">
+        <div className="flex-grow ">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<LoginPage />} />
@@ -53,6 +55,12 @@ function App() {
               <Route path="all_user" element={<AllUser />} />
               <Route path="upload_products" element={<AllProducts />} />
             </Route>
+            <Route
+              path={`product_by_category/:product`}
+              element={<ProductsByCategory />}
+            />
+            <Route path="product/:id" element={<ProductDetails />} />
+            {/* <Route path="product/:id" element={<addToCart />} /> */}
           </Routes>
         </div>
         <Footer />
