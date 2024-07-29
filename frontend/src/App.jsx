@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -17,31 +17,46 @@ import AllProducts from "./pages/AllProducts";
 import Home from "./pages/Home";
 import ProductsByCategory from "./pages/ShowProductsByCategory.jsx";
 import ProductDetails from "./pages/ProductDetails.jsx";
+import AddToCartPage from "./pages/AddToCartPage.jsx";
 
 function App() {
   const dispatch = useDispatch();
+  const [noOfProductInCart, setNoOfProductInCart] = useState(0);
 
   const fetchUserData = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/secret", {
+      const user = await axios.get("http://localhost:3000/secret", {
         withCredentials: true,
       });
-      // console.log("res.data", res.data); //user is logged in
-      if (res?.data) dispatch(setUserDetails(res.data)); //reducer e value set kre dlm
+      if (user?.data) dispatch(setUserDetails(user.data)); //reducer e value set kre dlm
     } catch (error) {
-      //console.error("user not logged in; ", error.message); //usr not logged in
+      console.log(error.message || error);
+    }
+  };
+  const fetchProductCountInCart = async () => {
+    const user = await axios.get("http://localhost:3000/secret", {
+      withCredentials: true,
+    });
+    if (user?.data) {
+      const productCount = await axios.get(
+        `http://localhost:3000/cart/count_product/${user.data._id}`
+      );
+      setNoOfProductInCart(productCount?.data?.count);
     }
   };
 
   useEffect(() => {
     fetchUserData();
+    fetchProductCountInCart();
   }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
       {/* sets the minimum height of the outer container to be the full height of the viewport. footer ekhn niche thkbe . content kom thakle upore chle jbe na*/}
-      <context.Provider value={{ fetchUserData }}>
-        <ToastContainer />
+      <context.Provider
+        value={{ fetchUserData, fetchProductCountInCart, noOfProductInCart }}
+      >
+        <ToastContainer position="top-center" />
         <Navbar />
         <div className="flex-grow ">
           <Routes>
@@ -60,7 +75,7 @@ function App() {
               element={<ProductsByCategory />}
             />
             <Route path="product/:id" element={<ProductDetails />} />
-            {/* <Route path="product/:id" element={<addToCart />} /> */}
+            <Route path="/cart/:userId" element={<AddToCartPage />} />
           </Routes>
         </div>
         <Footer />

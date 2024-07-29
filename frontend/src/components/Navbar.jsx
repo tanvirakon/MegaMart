@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { BsCart4 } from "react-icons/bs";
 import { FaRegUserCircle } from "react-icons/fa";
 import { FaSearchengin } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Logout from "../pages/LogoutPage";
+import context from "../assets/context/context.js";
 
 function Navbar() {
+  const { fetchProductCountInCart, noOfProductInCart } = useContext(context);
   const { userInfo } = useSelector((state) => state.user); //reducer r name chilo "user" in store.js
   // app.js ei setUserDetails() e value set krclm
   const [adminPopup, setAdminPopup] = useState(false);
@@ -80,12 +82,14 @@ function Navbar() {
             </div>
           </li>
           <li className="relative">
-            <Link to="">
-              <BsCart4 className="text-2xl " />
-              <span className="text-xs bg-red-500 px-1 text-white rounded-full absolute -top-2 -right-1">
-                0
-              </span>
-            </Link>
+            {userInfo && (
+              <Link to={`/cart/${userInfo._id}`}>
+                <BsCart4 className="text-2xl " />
+                <span className="text-xs bg-red-500 px-1 text-white rounded-full absolute -top-2 -right-1">
+                  {noOfProductInCart}
+                </span>
+              </Link>
+            )}
           </li>
           <li>
             {userInfo ? (

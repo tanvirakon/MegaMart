@@ -23,13 +23,13 @@ app.use(
   })
 );
 
-app.get("/secret", auth);
+app.get("/secret", auth); //user loggin naki na...login tkle sei data send krbe
 
 app.use("/api", basicRouter);
 app.use("/all_user", allUserRouter);
 app.use("/update_role", updateUserROleRoute);
 app.use("/product", ProductRouter);
-app.use("/add_to_cart", addToCartRouter);
+app.use("/cart", addToCartRouter);
 
 mongoose
   .connect(mongodbURL)

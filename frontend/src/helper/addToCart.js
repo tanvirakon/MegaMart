@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useContext } from "react";
 import { toast } from "react-toastify";
 
 const addToCart = async (e, id) => {
@@ -9,10 +10,9 @@ const addToCart = async (e, id) => {
   if (res.data.error) toast.error(res.data.message); // user loggedin na
   else {
     const response = await axios.post(
-      `http://localhost:3000/add_to_cart/${id}`,
+      `http://localhost:3000/cart/add_to_cart/${id}`,
       { userId: res.data._id }
     );
-    console.log("RESponse-----", response.data);
     if (response.data.error) toast.error(response.data.message);
     else toast.success(response.data.message);
   }

@@ -56,7 +56,6 @@ const UploadProductModal = ({ onclose, fetchAllProduct }) => {
       await axios
         .post("http://localhost:3000/product/upload", productData)
         .then((res) => {
-          console.log(res.data);
           toast.success(res.data.message);
           fetchAllProduct();
         })

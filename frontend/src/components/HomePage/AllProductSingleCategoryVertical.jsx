@@ -1,11 +1,13 @@
 import axios from "axios";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useContext } from "react";
 import { TbCurrencyTaka } from "react-icons/tb";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import addToCart from "../../helper/addToCart.js";
+import context from "../../assets/context/context.js";
 
 const AllProductSingleCategoryVertical = ({ category, heading }) => {
+  const { fetchProductCountInCart } = useContext(context);
   const scrollElement = useRef();
   const [data, setData] = useState([]);
 
@@ -26,6 +28,10 @@ const AllProductSingleCategoryVertical = ({ category, heading }) => {
 
   const previmg = () => {
     scrollElement.current.scrollLeft -= 300;
+  };
+  const handleAddToCart = async (e, id) => {
+    await addToCart(e, id);
+    fetchProductCountInCart();
   };
 
   return (
@@ -73,7 +79,7 @@ const AllProductSingleCategoryVertical = ({ category, heading }) => {
               <button
                 className="mt-2 font-semibold bg-red-600 text-white px-3 py-1 rounded-full hover:bg-red-700"
                 onClick={(e) => {
-                  addToCart(e, i?._id);
+                  handleAddToCart(e, i?._id);
                 }}
               >
                 Add to cart

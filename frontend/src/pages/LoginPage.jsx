@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import context from "../assets/context/context";
 
 function LoginPage() {
-  const { fetchUserData } = useContext(context); //fetchUserData function ta asbe
+  const { fetchUserData, fetchProductCountInCart } = useContext(context); //fetchUserData function ta asbe
 
   const navigate = useNavigate();
   const [data, setData] = useState({
@@ -41,6 +41,7 @@ function LoginPage() {
       // console.log("front", res.data);
       navigate("/");
       fetchUserData();
+      fetchProductCountInCart();
     } else toast.error(res.data.message);
   };
   return (
