@@ -10,6 +10,7 @@ import auth from "./middleware/authToken.js";
 import updateUserROleRoute from "./routes/updateUserRole.js";
 import ProductRouter from "./routes/product.js";
 import addToCartRouter from "./routes/addToCart.js";
+import productSearchRouter from "./routes/productSearch.js";
 
 const app = express();
 
@@ -30,6 +31,7 @@ app.use("/all_user", allUserRouter);
 app.use("/update_role", updateUserROleRoute);
 app.use("/product", ProductRouter);
 app.use("/cart", addToCartRouter);
+app.use("/search", productSearchRouter);
 
 mongoose
   .connect(mongodbURL)

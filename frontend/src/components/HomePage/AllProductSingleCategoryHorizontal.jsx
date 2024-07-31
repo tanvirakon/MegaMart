@@ -1,3 +1,4 @@
+// errr
 import axios from "axios";
 import React, { useContext, useRef, useState } from "react";
 import { useEffect } from "react";
@@ -7,6 +8,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import addToCart from "../../helper/addToCart.js";
 import context from "../../assets/context/context.js";
+import handleAddToCart from "../../helper/handleAddToCart.js";
 
 const AllProductSingleCategoryHorizontal = ({ category, heading }) => {
   const { fetchProductCountInCart } = useContext(context);
@@ -32,6 +34,7 @@ const AllProductSingleCategoryHorizontal = ({ category, heading }) => {
     fetchProductCountInCart();
     // await na dle realtime update hbe na...fetchProductCountInCart() kaj krbe na reload chara
   };
+  // handleAddToCart ta re helper r mddhe nbo..eda aro use hoise..bt prtec na
   return (
     <div className=" px-4 mt-[30px] relative">
       <h1 className="text-2xl font-semibold">{heading}:</h1>
@@ -54,7 +57,7 @@ const AllProductSingleCategoryHorizontal = ({ category, heading }) => {
         {data.map((i, j) => {
           return (
             <Link
-              to={"product/" + i?._id}
+              to={"/product/" + i?._id}
               className="w-[450px]  h-[180px] rounded-lg shadow-md flex mt-3"
               key={j}
             >

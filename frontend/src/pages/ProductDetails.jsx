@@ -1,11 +1,13 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { TbCurrencyTaka } from "react-icons/tb";
 import RecommemdedProduct from "../components/HomePage/RecommemdedProduct.jsx";
-RecommemdedProduct
+import context from "../assets/context/context.js";
+import addToCart from "../helper/addToCart.js";
 
 const ProductDetails = () => {
+  const { fetchProductCountInCart } = useContext(context);
   const [productData, setProductData] = useState({});
   const [currentImage, setCurrentImage] = useState();
   const { id } = useParams();
@@ -13,24 +15,34 @@ const ProductDetails = () => {
     const ProductDetails = await axios.get(
       `http://localhost:3000/product/${id}`
     );
-    setProductData(ProductDetails?.data.data);
-    setCurrentImage(ProductDetails?.data.data.productImage[0]);
+    setProductData(ProductDetails?.data?.data);
+    setCurrentImage(ProductDetails?.data?.data.productImage[0]);
   };
+  // useEffect(() => {
+  //   fetchData();
+  //   console.log(productData);
+  // }, [productData]);
+  // eikhane productData dear 1ta cz ase....product e dhokar pr recommengulay click krle upre endpoint change hoito but vitre content chnage hoito na...mane 1ta rerender pryojon chilo..eikhane productData dea rerender krtese
   useEffect(() => {
     fetchData();
-  }, []);
+    // console.log(id);
+  }, [id]);
+  // ok..jdi useffect e productData dle infinite rerender hy..so id r basis e render krbo...jdi id na dei & [] dei only..id change hbe but rerender hbe na..as [] only renders 1 time..
+  const handleAddToCart = async (e, id) => {
+    await addToCart(e, id);
+    fetchProductCountInCart();
+  };
   return (
     <div className="mt-4 ml-4 mr-4">
       <div className="flex">
         {/* image */}
         <div className="flex gap-4">
           <div className="flex gap-2 flex-col ">
-            {productData.productImage?.map((i, j) => {
+            {productData?.productImage?.map((i, j) => {
               return (
                 <div className="bg-slate-200 w-28" key={j}>
                   <img
                     src={i}
-                    alt=""
                     className="w-full mix-blend-multiply cursor-pointer"
                     onMouseOver={() => {
                       setCurrentImage(i);
@@ -41,7 +53,7 @@ const ProductDetails = () => {
             })}
           </div>
           <div className="bg-slate-200 h-96 w-96">
-            <img src={currentImage} alt="" className="mix-blend-multiply p-2" />
+            <img src={currentImage} className="mix-blend-multiply p-2" />
           </div>
         </div>
 
@@ -62,7 +74,12 @@ const ProductDetails = () => {
             <button className="outline outline-red-600 text-red-600 outline-1 px-3 py-1 rounded hover:bg-red-600 hover:text-white">
               Buy now
             </button>
-            <button className="bg-red-600 px-3 py-2 rounded text-white hover:bg-white hover:text-red-600 hover:outline outline-1">
+            <button
+              className="bg-red-600 px-3 py-2 rounded text-white hover:bg-white hover:text-red-600 hover:outline outline-1"
+              onClick={(e) => {
+                handleAddToCart(e, productData?._id);
+              }}
+            >
               Add to cart
             </button>
           </div>

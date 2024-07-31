@@ -18,6 +18,7 @@ import Home from "./pages/Home";
 import ProductsByCategory from "./pages/ShowProductsByCategory.jsx";
 import ProductDetails from "./pages/ProductDetails.jsx";
 import AddToCartPage from "./pages/AddToCartPage.jsx";
+import SearchPage from "./pages/SearchPage.jsx";
 
 function App() {
   const dispatch = useDispatch();
@@ -74,8 +75,9 @@ function App() {
               path={`product_by_category/:product`}
               element={<ProductsByCategory />}
             />
-            <Route path="product/:id" element={<ProductDetails />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/cart/:userId" element={<AddToCartPage />} />
+            <Route path="/search/:category" element={<SearchPage />} />
           </Routes>
         </div>
         <Footer />

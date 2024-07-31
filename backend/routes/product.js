@@ -2,7 +2,7 @@ import express from "express";
 import productsUploadModel from "../models/productsModel.js";
 const router = express.Router();
 
-// store product
+// store product in db
 router.post("/upload", async (req, res) => {
   try {
     const newProduct = await productsUploadModel.create(req.body);
@@ -16,7 +16,7 @@ router.post("/upload", async (req, res) => {
   }
 });
 
-//get product
+//get product from db
 router.get("/get_all_products", async (req, res) => {
   try {
     const allProduct = await productsUploadModel.find();
