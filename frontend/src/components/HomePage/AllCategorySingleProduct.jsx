@@ -18,7 +18,7 @@ const AllCategorySingleProduct = () => {
     fetchProductByCategory();
   }, []);
   return (
-    <div className=" ml-12 mr-12 mt-10 ">
+    <div className="mx-4 mt-10 overflow-x-auto">
       <div className="flex gap-6 justify-between">
         {productByCategory?.map((product, index) => {
           return (

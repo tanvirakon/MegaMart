@@ -34,13 +34,14 @@ const ProductDetails = () => {
   };
   return (
     <div className="mt-4 ml-4 mr-4">
-      <div className="flex">
-        {/* image */}
-        <div className="flex gap-4">
+      {/* image */}
+      <div className="md:flex">
+        <div className="flex gap-1 md:gap-4">
+          {/* left all pic */}
           <div className="flex gap-2 flex-col ">
             {productData?.productImage?.map((i, j) => {
               return (
-                <div className="bg-slate-200 w-28" key={j}>
+                <div className="bg-slate-200 w-20 md:w-28" key={j}>
                   <img
                     src={i}
                     className="w-full mix-blend-multiply cursor-pointer"
@@ -52,13 +53,15 @@ const ProductDetails = () => {
               );
             })}
           </div>
-          <div className="bg-slate-200 h-96 w-96">
+
+          {/* right big pic */}
+          <div className="bg-slate-200 md:h-96 md:w-96">
             <img src={currentImage} className="mix-blend-multiply p-2" />
           </div>
         </div>
 
         {/* details */}
-        <div className="ml-4 w-full ">
+        <div className="ml-4 w-full mt-10 md:mt-0">
           <p className="bg-red-400 px-3 py-1 rounded-full text-white inline-block">
             {productData?.brandName}
           </p>
@@ -87,6 +90,8 @@ const ProductDetails = () => {
           <p>{productData?.description}</p>
         </div>
       </div>
+
+      {/* below recommendetion */}
       {productData?.category && (
         <RecommemdedProduct
           category={productData?.category}

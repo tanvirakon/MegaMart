@@ -5,8 +5,8 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { FaSearchengin } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import Logout from "../pages/LogoutPage";
 import context from "../assets/context/context.js";
+import Logout from "../pages/LogoutPage";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -27,10 +27,10 @@ const Navbar = () => {
         <Link to="/" className="flex">
           <img
             src="./src/images/logo.jpeg"
-            alt=""
-            className="h-[50px] mix-blend-multiply"
+            alt="logo"
+            className="h-[50px] mix-blend-multiply block"
           />
-          <h1 className="text-2xl ml-1 flex justify-center items-center text-green-700 font-serif font-semibold">
+          <h1 className="text-2xl ml-1 md:flex justify-center items-center text-green-700 font-serif font-semibold hidden md:block">
             MegaMart
           </h1>
         </Link>

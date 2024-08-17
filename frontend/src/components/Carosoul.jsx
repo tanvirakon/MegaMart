@@ -22,7 +22,7 @@ const Carosoul = () => {
     return () => clearInterval(intervalId);
   }, []);
   return (
-    <div className="h-[450px] ml-4 mr-4 relative">
+    <div className="h-[200px] ml-4 mr-4 relative md:h-[450px]">
       <img
         src={imgArray[imgIndex]}
         alt=""

@@ -25,15 +25,15 @@ const SearchPage = () => {
     se();
   }, [category]);
   return (
-    <div>
-      <p className="ml-2 mt-2">matches found: {allProduct.length}</p>
+    <div className="mx-4">
+      <p className="mt-2">matches found: {allProduct.length}</p>
       {allProduct?.length == 0 && (
         <div className="flex justify-center mt-52">
           <h1 className="text-2xl">no matches found</h1>
         </div>
       )}
       {allProduct?.length > 0 && (
-        <div className="gap-6 overflow-hidden transition-all grid grid-cols-5">
+        <div className="gap-6 overflow-hidden transition-all grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           <MapOfImages allProduct={allProduct} />
         </div>
       )}

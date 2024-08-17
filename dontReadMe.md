@@ -1,3 +1,5 @@
+ <!-- nodemon : https://www.youtube.com/watch?v=cYHPNurmXGU -->
+
 1. after setting using useState, tring to log?!  
     wont work:
    setAllProductDetailsInCart(productDetailsData);
@@ -21,3 +23,4 @@
    fetchData();
    }, [productData]);
    ```
+   ok...no it doesnt. it causes infinite rerender.so it should be based on id. check code for more understanding.
