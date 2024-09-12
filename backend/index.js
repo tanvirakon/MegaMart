@@ -11,6 +11,7 @@ import updateUserROleRoute from "./routes/updateUserRole.js";
 import ProductRouter from "./routes/product.js";
 import addToCartRouter from "./routes/addToCart.js";
 import productSearchRouter from "./routes/productSearch.js";
+import otpVerify from "./routes/otpVerify.js"
 
 const app = express();
 
@@ -32,6 +33,7 @@ app.use("/update_role", updateUserROleRoute);
 app.use("/product", ProductRouter);
 app.use("/cart", addToCartRouter);
 app.use("/search", productSearchRouter);
+app.use("/otp", otpVerify);
 
 mongoose
   .connect(mongodbURL)

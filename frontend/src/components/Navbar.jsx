@@ -1,5 +1,5 @@
 // search e kisu lekahr pr oita theke jay..onno kisu click krle jeno oita chle jay -> krte hbe
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { BsCart4 } from "react-icons/bs";
 import { FaRegUserCircle } from "react-icons/fa";
 import { FaSearchengin } from "react-icons/fa6";
@@ -7,10 +7,11 @@ import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import context from "../assets/context/context.js";
 import Logout from "../pages/LogoutPage";
+import logo from "../images/logo.jpeg";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const { fetchProductCountInCart, noOfProductInCart } = useContext(context);
+  const { noOfProductInCart } = useContext(context);
   const { userInfo } = useSelector((state) => state.user); //reducer r name chilo "user" in store.js
   // app.js ei setUserDetails() e value set krclm
   const [adminPopup, setAdminPopup] = useState(false);
@@ -26,8 +27,8 @@ const Navbar = () => {
       <div className="ml-10">
         <Link to="/" className="flex">
           <img
-            src="./src/images/logo.jpeg"
-            alt="logo"
+            src={logo}
+            alt=""
             className="h-[50px] mix-blend-multiply block"
           />
           <h1 className="text-2xl ml-1 md:flex justify-center items-center text-green-700 font-serif font-semibold hidden md:block">
@@ -54,7 +55,7 @@ const Navbar = () => {
             <div className="relative flex justify-center">
               <div>
                 {/* jdi login hy then -> jdi pic thake pic show, na tkle icon show..login na hle kno kisui na */}
-                {userInfo &&
+                {userInfo?._id && // only useinfo na diye userinfo._id dc, naile logout kre refresh krle abr pic/cart dekha jay..cz only userinfo te "user not logged in.0ky?!huh!!" dekha jay
                   (userInfo?.picture ? (
                     <img
                       src={userInfo.picture}
@@ -94,7 +95,7 @@ const Navbar = () => {
             </div>
           </li>
           <li className="relative">
-            {userInfo && (
+            {userInfo?._id && (
               <Link to={`/cart/${userInfo._id}`}>
                 <BsCart4 className="text-2xl " />
                 <span className="text-xs bg-red-500 px-1 text-white rounded-full absolute -top-2 -right-1">
@@ -104,7 +105,7 @@ const Navbar = () => {
             )}
           </li>
           <li>
-            {userInfo ? (
+            {userInfo?._id ? (
               <Logout />
             ) : (
               <Link

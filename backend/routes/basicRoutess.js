@@ -3,6 +3,7 @@ import express from "express";
 import md5 from "md5";
 import userRegisterModel from "../models/userRegisterModel.js";
 import jsonwebtoken from "jsonwebtoken";
+import nodemailer from "nodemailer";
 
 const router = express.Router();
 
@@ -26,6 +27,7 @@ router.post("/signup", async (req, res) => {
   }
 });
 
+// check user email & pass & create token
 router.post("/canlogin", async (req, res) => {
   const { email, password } = req.body;
   const findUser = await userRegisterModel.findOne({
@@ -61,5 +63,52 @@ router.get("/logout", async (req, res) => {
     res.send(error.message || error);
   }
 });
+
+// forget pass page e email validation
+router.post("/checkEmail", async (req, res) => {
+  try {
+    const { email } = req.body;
+    const data = await userRegisterModel.findOne({ email });
+    if (data)
+      res.send({
+        error: false,
+        message: "user found",
+        data: "user found",
+      });
+    else {
+      res.send({
+        error: true,
+        message: "user not found",
+        data: "user not found",
+      });
+    }
+  } catch (error) {
+    res.send(error.message || error);
+  }
+});
+
+// forget pass e email validation r pr new pass set
+router.post("/setNewPass", async (req, res) => {
+  try {
+    let { email, password } = req.body;
+    password = md5(password);
+
+    const data = await userRegisterModel.findOneAndUpdate(
+      { email },
+      { $set: { password } }
+    );
+
+    if (data)
+      res.send({
+        error: false,
+        message: "new password set",
+        data: data,
+      });
+  } catch (error) {
+    res.send(error.message || error);
+  }
+});
+
+//nodemailer
 
 export default router;

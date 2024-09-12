@@ -16,7 +16,7 @@ router.post("/upload", async (req, res) => {
   }
 });
 
-//get product from db
+//get all product from db
 router.get("/get_all_products", async (req, res) => {
   try {
     const allProduct = await productsUploadModel.find();
@@ -90,6 +90,25 @@ router.get("/:id", async (req, res) => {
     const product = await productsUploadModel.findById(id);
     res.send({
       data: product,
+      success: true,
+    });
+  } catch (error) {
+    res.send(error.message || error);
+  }
+});
+
+// get products for the categories sent by checkbox
+router.get("/product_by_anyCategories/:category", async (req, res) => {
+  try {
+    const { category } = req.params; //string
+    const categoryArray = category.split(","); //string -> array
+    const data = await productsUploadModel
+      .find({
+        category: { $in: categoryArray },
+      })
+      .sort({ price: 1 });
+    res.send({
+      data: data,
       success: true,
     });
   } catch (error) {

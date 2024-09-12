@@ -54,7 +54,7 @@ const AddToCartPage = () => {
   const totalPriceOfProducts = () => {
     let sum = 0;
     allProductDetailsInCart?.map((i, j) => {
-      sum += i.price * cartData[j]?.productQuantity;
+      sum += i?.price * cartData[j]?.productQuantity;
     });
     setTotalPrice(sum);
   };
@@ -92,7 +92,7 @@ const AddToCartPage = () => {
   };
 
   return (
-    <div className="mx-16">
+    <div className="lg:mx-10 ">
       {cartData.length === 0 && (
         <div className="flex justify-center mt-52">
           <h1 className="text-2xl">cart empty</h1>
@@ -100,13 +100,14 @@ const AddToCartPage = () => {
       )}
 
       {cartData.length > 0 && (
-        <div className="flex justify-between mt-5">
-          <div className="flex flex-col gap-2 w-[1000px]">
+        <div className="justify-between mt-5 lg:flex">
+          {/* products in cart */}
+          <div className="flex flex-col gap-2 w-[430px] lg:w-[1000px] md:w-[780px]">
             {allProductDetailsInCart?.map((i, j) => {
               return (
                 <div
                   key={j}
-                  className="h-36 my-1 bg-white border border-slate-200 flex gap-5"
+                  className="h-36 my-1 bg-white border border-slate-200 flex gap-5 mx-2 md:mx-5"
                 >
                   <div className="w-32 bg-slate-200 h-full">
                     <img
@@ -115,7 +116,9 @@ const AddToCartPage = () => {
                     />
                   </div>
                   <div className="w-full relative">
-                    <p className="text-xl mt-2">{i?.productName}</p>
+                    <p className="text-xl mt-2 line-clamp-1 ">
+                      {i?.productName}
+                    </p>
                     <p className="text-small font-light">{i?.category}</p>
                     <p className="mt-2 mb-2 flex items-center font-semibold text-red-600">
                       <TbCurrencyTaka /> {i?.price}
@@ -168,7 +171,9 @@ const AddToCartPage = () => {
               );
             })}
           </div>
-          <div className="bg-white h-36 w-[400px] mt-2 rounded sticky top-4">
+
+          {/* summary */}
+          <div className="bg-white h-36 w-[410px] mt-2 md:w-[736px] lg:w-[450px] rounded mb-6 sticky top-4 mx-2 md:mx-5">
             <div className="bg-blue-500 text-white p-2 text-xl">summary</div>
             <div className="flex justify-between mx-2 mt-2">
               <p>Quantity</p>

@@ -5,8 +5,9 @@ import { IoManSharp } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import context from "../assets/context/context";
+import addToCart from "../helper/addToCart.js";
 
-function LoginPage() {
+const LoginPage = ({ heading, onclose }) => {
   const { fetchUserData, fetchProductCountInCart } = useContext(context); //fetchUserData function ta asbe
 
   const navigate = useNavigate();
@@ -36,18 +37,24 @@ function LoginPage() {
       loginData,
       { withCredentials: "include" }
     );
-    if (res.data.data) {
+    if (res?.data?.data) {
       toast.success(res.data.message);
       // console.log("front", res.data);
-      navigate("/");
+      !heading && navigate("/"); //main login page e, heading nai, login krar pre home e nye jbe
       fetchUserData();
       fetchProductCountInCart();
+      heading && onclose();
     } else toast.error(res.data.message);
   };
   return (
-    <div className="bg-white mx-auto max-w-sm p-4 mt-14 flex flex-col rounded-xl ">
+    <div
+      className={`bg-white mx-auto max-w-sm p-4 flex flex-col rounded-xl ${
+        heading ? "mt-10" : "mt-14"
+      }`}
+    >
       <div className="mx-auto">
-        <IoManSharp className="text-7xl" />
+        {heading && <p className="text-2xl font-semibold mb-5">{heading}</p>}
+        {!heading && <IoManSharp className="text-7xl" />}
       </div>
       <form className="relative" onSubmit={formSubmit}>
         <div>
@@ -117,6 +124,6 @@ function LoginPage() {
       </div>
     </div>
   );
-}
+};
 
 export default LoginPage;

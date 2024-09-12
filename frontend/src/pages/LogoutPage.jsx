@@ -7,7 +7,7 @@ const LogoutButton = () => {
   const dispatch = useDispatch();
   const handleLogout = async () => {
     try {
-      const clearCookie = await axios.get("http://localhost:3000/api/logout", {
+      const clearCookie = await axios.get("http://localhost:3000/api/logout", { //cookie clear
         withCredentials: "include",
       });
       toast.success(clearCookie.data.message);

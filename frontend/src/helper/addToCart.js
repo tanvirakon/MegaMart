@@ -1,13 +1,12 @@
 import axios from "axios";
-import { useContext } from "react";
 import { toast } from "react-toastify";
 
-const addToCart = async (e, id) => {
+const addToCart = async (e, id, setShowLoginModal) => {
   e?.preventDefault();
   const res = await axios.get("http://localhost:3000/secret", {
     withCredentials: true,
   });
-  if (res.data.error) toast.error(res.data.message); // user loggedin na
+  if (res?.data?.error) setShowLoginModal(true); // user loggedin na
   else {
     const response = await axios.post(
       `http://localhost:3000/cart/add_to_cart/${id}`,

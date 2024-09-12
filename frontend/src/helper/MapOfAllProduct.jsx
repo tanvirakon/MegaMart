@@ -14,7 +14,7 @@ const MapOfImages = ({ allProduct }) => {
   return allProduct?.map((i, j) => (
     <Link
       to={"/product/" + i?._id} // product r age / na dile ager link r pore giye add hy...wth!!
-      className="w-[300px] h-[350px] rounded-lg shadow-md
+      className="w-[250px] lg:w-[300px] h-[350px] rounded-lg shadow-md
          flex-shrink-0 flex flex-col
           bg-white overflow-hidden mt-3"
       key={j}

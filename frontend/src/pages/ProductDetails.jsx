@@ -1,16 +1,21 @@
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { TbCurrencyTaka } from "react-icons/tb";
 import RecommemdedProduct from "../components/HomePage/RecommemdedProduct.jsx";
 import context from "../assets/context/context.js";
 import addToCart from "../helper/addToCart.js";
+import AddToCartWhenUserNotLogin from "../modals/AddToCartWhenUserNotLogin.jsx";
+import { useSelector } from "react-redux";
 
 const ProductDetails = () => {
+  const navigate = useNavigate();
+  const { userInfo } = useSelector((state) => state.user);
   const { fetchProductCountInCart } = useContext(context);
   const [productData, setProductData] = useState({});
   const [currentImage, setCurrentImage] = useState();
   const { id } = useParams();
+  const [showLoginModal, setShowLoginModal] = useState(false);
   const fetchData = async () => {
     const ProductDetails = await axios.get(
       `http://localhost:3000/product/${id}`
@@ -29,7 +34,7 @@ const ProductDetails = () => {
   }, [id]);
   // ok..jdi useffect e productData dle infinite rerender hy..so id r basis e render krbo...jdi id na dei & [] dei only..id change hbe but rerender hbe na..as [] only renders 1 time..
   const handleAddToCart = async (e, id) => {
-    await addToCart(e, id);
+    await addToCart(e, id, setShowLoginModal);
     fetchProductCountInCart();
   };
   return (
@@ -74,8 +79,16 @@ const ProductDetails = () => {
             {productData.price}
           </p>
           <div className="flex w-fit gap-4 mt-4 font-semibold">
-            <button className="outline outline-red-600 text-red-600 outline-1 px-3 py-1 rounded hover:bg-red-600 hover:text-white">
-              Buy now
+            <button
+              className="outline outline-red-600 text-red-600 outline-1 px-3 py-1 rounded hover:bg-red-600 hover:text-white"
+              onClick={(e) => {
+                //handleAddToCart shes hwr prii navigate hbe, alada alada dle cart e add hto, redirect hto, bt referesh dea lgto 1ta
+                handleAddToCart(e, productData?._id).then(() => {
+                  navigate(`/cart/${userInfo?._id}`);
+                });
+              }}
+            >
+              buy now
             </button>
             <button
               className="bg-red-600 px-3 py-2 rounded text-white hover:bg-white hover:text-red-600 hover:outline outline-1"
@@ -96,6 +109,14 @@ const ProductDetails = () => {
         <RecommemdedProduct
           category={productData?.category}
           heading={"Recommonded product"}
+        />
+      )}
+
+      {showLoginModal && (
+        <AddToCartWhenUserNotLogin
+          onclose={() => {
+            setShowLoginModal(false);
+          }}
         />
       )}
     </div>

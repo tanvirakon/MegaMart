@@ -3,7 +3,6 @@ import role from "../helper/role.js";
 import { IoMdClose } from "react-icons/io";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
 
 const EditUserModal = ({ user, onclose, userFunc }) => {
   const [userRole, setUserRole] = useState("admin");
