@@ -44,7 +44,7 @@ router.get("/count_product/:userId", async (req, res) => {
   }
 });
 
-// return cart ddetails for specific user
+// return cart details for specific user
 router.get("/user/:userId", async (req, res) => {
   try {
     const { userId } = req.params;

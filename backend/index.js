@@ -11,7 +11,8 @@ import updateUserROleRoute from "./routes/updateUserRole.js";
 import ProductRouter from "./routes/product.js";
 import addToCartRouter from "./routes/addToCart.js";
 import productSearchRouter from "./routes/productSearch.js";
-import otpVerify from "./routes/otpVerify.js"
+import otpVerify from "./routes/otpVerify.js";
+import stripePayment from "./routes/stripePayment.js";
 
 const app = express();
 
@@ -34,6 +35,7 @@ app.use("/product", ProductRouter);
 app.use("/cart", addToCartRouter);
 app.use("/search", productSearchRouter);
 app.use("/otp", otpVerify);
+app.use("/make_payment", stripePayment);
 
 mongoose
   .connect(mongodbURL)

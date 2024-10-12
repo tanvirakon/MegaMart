@@ -3,7 +3,6 @@ import express from "express";
 import md5 from "md5";
 import userRegisterModel from "../models/userRegisterModel.js";
 import jsonwebtoken from "jsonwebtoken";
-import nodemailer from "nodemailer";
 
 const router = express.Router();
 

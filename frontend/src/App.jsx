@@ -19,6 +19,8 @@ import ProductsByCategory from "./pages/ShowProductsByCategory.jsx";
 import ProductDetails from "./pages/ProductDetails.jsx";
 import AddToCartPage from "./pages/AddToCartPage.jsx";
 import SearchPage from "./pages/SearchPage.jsx";
+import Done from "./pages/Done";
+import Fail from "./pages/Fail";
 
 function App() {
   const dispatch = useDispatch();
@@ -65,6 +67,8 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/forget" element={<Forget />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/success" element={<Done />} />
+            <Route path="/error" element={<Fail />} />
             <Route path="admin-panel" element={<AdminPanel />}>
               <Route index element={<AllProducts />} />
               {/* by default AllProducts select hye tkbe */}

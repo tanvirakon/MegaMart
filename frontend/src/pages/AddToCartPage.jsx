@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import { toast } from "react-toastify";
 import context from "../assets/context/context.js";
+import { loadStripe } from "@stripe/stripe-js";
 
 const AddToCartPage = () => {
   const { fetchProductCountInCart, noOfProductInCart } = useContext(context);
@@ -22,7 +23,8 @@ const AddToCartPage = () => {
       const cartDetailsOfUser = await axios.get(
         `http://localhost:3000/cart/user/${userId}`
       );
-      setCartData(cartDetailsOfUser?.data?.data);
+
+      setCartData(cartDetailsOfUser?.data?.data); //array
       const array = cartDetailsOfUser?.data?.data;
       // didint understand
       const productDetailsPromises = array.map(
@@ -33,6 +35,7 @@ const AddToCartPage = () => {
       const productDetailsData = productDetails.map(
         (details) => details.data.data
       );
+
       setAllProductDetailsInCart(productDetailsData);
 
       // why it doesnt work
@@ -88,6 +91,27 @@ const AddToCartPage = () => {
       fetchProductCountInCart();
       fetchCartDetails();
       toast.success("product deleted");
+    }
+  };
+  const makePayment = async () => {
+    var stripe = await loadStripe(
+      "pk_test_51Q7qyjJUIzyu88OyCieVJNg6oKUcZNUAYut80ie2V1JFxYUXesks8jT5U4rB9bPkmtLl4difztyTvm2hRsnKyMhK005xahzYPk"
+    );
+    const payload = {
+      products: allProductDetailsInCart,
+      productsWithQuantity: cartData,
+    };
+    const response = await axios.post(
+      `http://localhost:3000/make_payment`,
+      payload
+    );
+    const { id: sessionId } = response.data;
+    console.log("response", response);
+    const result = stripe.redirectToCheckout({
+      sessionId,
+    });
+    if (result.error) {
+      console.error("Stripe Checkout Error:", result.error.message);
     }
   };
 
@@ -184,7 +208,7 @@ const AddToCartPage = () => {
               <p>{totalPrice}</p>
             </div>
             <div className="bg-red-500 text-white p-2 text-xl mt-2 text-center">
-              <button>pay now</button>
+              <button onClick={makePayment}>pay now</button>
             </div>
           </div>
         </div>
