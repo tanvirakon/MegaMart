@@ -14,6 +14,11 @@ const AddToCartPage = () => {
   const [cartData, setCartData] = useState([]);
   let [allProductDetailsInCart, setAllProductDetailsInCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState();
+  const [undoButtonShow, setUndoButtonShow] = useState(false);
+  const [lastDeleteItem, setLastDeleteItem] = useState({
+    productId: {},
+    userId: {},
+  });
   const fetchCartDetails = async () => {
     const user = await axios.get("http://localhost:3000/secret", {
       withCredentials: true,
@@ -23,7 +28,6 @@ const AddToCartPage = () => {
       const cartDetailsOfUser = await axios.get(
         `http://localhost:3000/cart/user/${userId}`
       );
-
       setCartData(cartDetailsOfUser?.data?.data); //array
       const array = cartDetailsOfUser?.data?.data;
       // didint understand
@@ -32,10 +36,9 @@ const AddToCartPage = () => {
           await axios.get(`http://localhost:3000/product/${item.productId}`)
       );
       const productDetails = await Promise.all(productDetailsPromises);
-      const productDetailsData = productDetails.map(
+      let productDetailsData = productDetails.map(
         (details) => details.data.data
       );
-
       setAllProductDetailsInCart(productDetailsData);
 
       // why it doesnt work
@@ -84,6 +87,9 @@ const AddToCartPage = () => {
   };
 
   const dltProductFromCart = async (productId, userId) => {
+    setUndoButtonShow(true);
+    setLastDeleteItem({ productId: productId, userId: userId });
+    console.log(productId);
     const dlt = await axios.delete(
       `http://localhost:3000/cart/dltProduct/${productId}/${userId}`
     );
@@ -91,22 +97,26 @@ const AddToCartPage = () => {
       fetchProductCountInCart();
       fetchCartDetails();
       toast.success("product deleted");
+      setTimeout(() => {
+        setUndoButtonShow(false);
+      }, 2200);
     }
   };
-  const makePayment = async () => {
+
+  const stripePayment = async () => {
     var stripe = await loadStripe(
       "pk_test_51Q7qyjJUIzyu88OyCieVJNg6oKUcZNUAYut80ie2V1JFxYUXesks8jT5U4rB9bPkmtLl4difztyTvm2hRsnKyMhK005xahzYPk"
     );
     const payload = {
       products: allProductDetailsInCart,
       productsWithQuantity: cartData,
+      totalPrice,
     };
     const response = await axios.post(
       `http://localhost:3000/make_payment`,
       payload
     );
     const { id: sessionId } = response.data;
-    console.log("response", response);
     const result = stripe.redirectToCheckout({
       sessionId,
     });
@@ -114,12 +124,47 @@ const AddToCartPage = () => {
       console.error("Stripe Checkout Error:", result.error.message);
     }
   };
+  const sslcommerzPayment = async () => {
+    const payload = {
+      products: allProductDetailsInCart,
+      productsWithQuantity: cartData,
+      totalPrice,
+    };
+    const kk = await axios.post(
+      "http://localhost:3000/sslcommerz/init",
+      payload
+    );
+    window.location.replace(kk.data.url);
+  };
+  const undoDeleteFunc = async () => {
+    const lastProductId = lastDeleteItem.productId;
+    const userId = lastDeleteItem.userId;
+    const undo = await axios.post(
+      `http://localhost:3000/cart/add_to_cart/${lastProductId}`,
+      { userId }
+    );
+    if (undo.data.success) {
+      fetchProductCountInCart();
+      fetchCartDetails();
+      toast.success("product added");
+    }
+  };
 
   return (
-    <div className="lg:mx-10 ">
+    <div className="lg:mx-10">
       {cartData.length === 0 && (
         <div className="flex justify-center mt-52">
           <h1 className="text-2xl">cart empty</h1>
+        </div>
+      )}
+      {undoButtonShow && (
+        <div className="absolute top-[80px] left-[150px] lg:left-[950px] md:left-[350px]">
+          <button
+            className="bg-red-500 w-14 rounded-lg text-white "
+            onClick={undoDeleteFunc}
+          >
+            undo
+          </button>
         </div>
       )}
 
@@ -207,8 +252,9 @@ const AddToCartPage = () => {
               <p>Total Price</p>
               <p>{totalPrice}</p>
             </div>
-            <div className="bg-red-500 text-white p-2 text-xl mt-2 text-center">
-              <button onClick={makePayment}>pay now</button>
+            <div className="text-xl mt-2 text-center flex gap-2 w-full">
+              <button onClick={stripePayment} className="bg-red-500 text-white w-full h-14 hover:bg-red-600 rounded-md">pay with stripe</button>
+              <button onClick={sslcommerzPayment} className="bg-red-500 text-white w-full h-14 hover:bg-red-600 rounded-md">pay with sslcommerz</button>
             </div>
           </div>
         </div>

@@ -59,7 +59,7 @@ function App() {
       <context.Provider
         value={{ fetchUserData, fetchProductCountInCart, noOfProductInCart }}
       >
-        <ToastContainer position="top-center" />
+        <ToastContainer position="top-center" autoClose={2000} stacked  />
         <Navbar />
         <div className="flex-grow ">
           <Routes>

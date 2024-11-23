@@ -24,6 +24,7 @@ router.post("/add_to_cart/:productId", async (req, res) => {
         data: addedToCart,
         message: "product added to cart",
         error: false,
+        success: true,
       });
     }
   } catch (error) {
@@ -48,7 +49,9 @@ router.get("/count_product/:userId", async (req, res) => {
 router.get("/user/:userId", async (req, res) => {
   try {
     const { userId } = req.params;
-    const cartData = await addToCartModel.find({ userId });
+    const cartData = await addToCartModel
+      .find({ userId })
+      .sort({ productId: 1 });
     res.send({
       data: cartData,
     });

@@ -13,6 +13,7 @@ import addToCartRouter from "./routes/addToCart.js";
 import productSearchRouter from "./routes/productSearch.js";
 import otpVerify from "./routes/otpVerify.js";
 import stripePayment from "./routes/stripePayment.js";
+import sslcommerzPayment from "./routes/sslcommerzPayment.js";
 
 const app = express();
 
@@ -36,6 +37,7 @@ app.use("/cart", addToCartRouter);
 app.use("/search", productSearchRouter);
 app.use("/otp", otpVerify);
 app.use("/make_payment", stripePayment);
+app.use("/sslcommerz", sslcommerzPayment);
 
 mongoose
   .connect(mongodbURL)

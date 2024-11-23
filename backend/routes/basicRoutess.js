@@ -108,6 +108,6 @@ router.post("/setNewPass", async (req, res) => {
   }
 });
 
-//nodemailer
+
 
 export default router;
