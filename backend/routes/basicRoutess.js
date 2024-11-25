@@ -10,7 +10,6 @@ router.post("/signup", async (req, res) => {
   try {
     let { name, email, password, picture, role } = req.body;
     password = md5(password);
-    role = "general";
 
     const userData = {
       name,
@@ -19,6 +18,7 @@ router.post("/signup", async (req, res) => {
       role,
       picture,
     };
+    console.log(userData);
     const newUser = await userRegisterModel.create(userData);
     res.status(200).send(newUser);
   } catch (err) {
@@ -108,6 +108,21 @@ router.post("/setNewPass", async (req, res) => {
   }
 });
 
-
+// admin kno acc delete kre dte parbe
+router.delete("/delete/:email", async (req, res) => {
+  try {
+    const { email } = req.params;
+    const response = await userRegisterModel.deleteOne({ email });
+    if (response.acknowledged) {
+      res.send({
+        error: false,
+        success: true,
+        message: "user deleted",
+      });
+    }
+  } catch (error) {
+    res.send(error.message || error);
+  }
+});
 
 export default router;

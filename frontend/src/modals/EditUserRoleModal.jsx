@@ -4,7 +4,7 @@ import { IoMdClose } from "react-icons/io";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const EditUserModal = ({ user, onclose, userFunc }) => {
+const EditUserRoleModal = ({ user, onclose, userFunc }) => {
   const [userRole, setUserRole] = useState("admin");
   const modalRef = useRef();
   const closeModal = (e) => {
@@ -67,4 +67,4 @@ const EditUserModal = ({ user, onclose, userFunc }) => {
   );
 };
 
-export default EditUserModal;
+export default EditUserRoleModal;

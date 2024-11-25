@@ -15,6 +15,7 @@ const Navbar = () => {
   const { userInfo } = useSelector((state) => state.user); //reducer r name chilo "user" in store.js
   // app.js ei setUserDetails() e value set krclm
   const [adminPopup, setAdminPopup] = useState(false);
+  const [sellerPopup, setSellerPopup] = useState(false);
   const [searchText, setSearchText] = useState("");
   const handleSearch = (e) => {
     const { value } = e.target;
@@ -62,6 +63,9 @@ const Navbar = () => {
                       alt={userInfo.name}
                       className="size-8 rounded-full cursor-pointer"
                       onClick={() => {
+                        setSellerPopup((prev) => {
+                          return (prev = !prev);
+                        });
                         setAdminPopup((prev) => {
                           return (prev = !prev);
                         });
@@ -71,6 +75,9 @@ const Navbar = () => {
                     <FaRegUserCircle
                       className="text-2xl cursor-pointer"
                       onClick={() => {
+                        setSellerPopup((prev) => {
+                          return (prev = !prev);
+                        });
                         setAdminPopup((prev) => {
                           return (prev = !prev);
                         });
@@ -89,6 +96,19 @@ const Navbar = () => {
                     }}
                   >
                     Admin panel
+                  </Link>
+                </div>
+              )}
+              {userInfo?.role === "seller" && sellerPopup && (
+                <div className="absolute bg-white p-3 top-10 whitespace-nowrap rounded shadow-md max-md:hidden">
+                  <Link
+                    to="/seller_dashboard"
+                    className="hover:bg-slate-100 p-2"
+                    onClick={() => {
+                      setSellerPopup((prev) => !prev);
+                    }}
+                  >
+                    Seller dashboard
                   </Link>
                 </div>
               )}

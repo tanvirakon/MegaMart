@@ -13,6 +13,7 @@ function Signup() {
     password: "",
     confirmPassword: "",
     picture: "",
+    role: "seller",
   });
 
   function newEntry(e) {
@@ -44,12 +45,12 @@ function Signup() {
         email: data.email,
         password: data.password,
         picture: data.picture,
+        role: data.role,
       };
       await axios
         .post("http://localhost:3000/api/Signup", userData)
         .then((res) => {
           toast.success("acc create susscess");
-          console.log("res from frontend", res);
           navigate("/login");
         })
         .catch((err) => {
@@ -168,6 +169,15 @@ function Signup() {
           className="mt-2 cursor-pointer "
           onChange={handleUploadPic}
         />
+
+        <div className="mt-2">
+          <label htmlFor="role">i am a : </label>
+          <select id="role" className="w-full mt-2" onChange={newEntry} name="role">
+            <option value="seller">seller</option>
+            <option value="buyer">buyer</option>
+          </select>
+        </div>
+
         <div className="mt-4 flex justify-center">
           <button className="bg-red-500 px-4 py-2 rounded-full text-white hover:bg-red-600 ">
             create account

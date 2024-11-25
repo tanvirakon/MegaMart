@@ -4,13 +4,12 @@ import { useSelector } from "react-redux";
 import { FaRegUserCircle } from "react-icons/fa";
 import { Outlet } from "react-router-dom";
 
-function AdminPanel() {
+function SellerDashboard() {
   const { userInfo } = useSelector((state) => state.user);
   const navigate = useNavigate();
   useEffect(() => {
-    if (userInfo?.role != "admin") navigate("/");
+    if (userInfo?.role != "seller") navigate("/");
   }, [userInfo]);
-  // admin logout krlei home e redirect hye jbe
   return (
     <div className="flex px-4 mt-4 min-h-[710px] max-md:hidden">
       <aside className="bg-white w-80 p-3 flex customShadow flex-col h-[690px] rounded-lg">
@@ -31,14 +30,11 @@ function AdminPanel() {
         <p className="self-center">{userInfo?.role}</p>
 
         <div className="mt-10 flex flex-col gap-3">
-          <Link to={"all_user"} className="hover:bg-slate-100 p-2">
-            All users
-          </Link>
           {/* kkhn / dbo r kkhn / dbo na sure hte hbe, absolute / relative path.... */}
 
-          {/* <Link to={"upload_products"} className="hover:bg-slate-100 p-2">
+          <Link to={"upload_products"} className="hover:bg-slate-100 p-2">
             All products
-          </Link> */}
+          </Link>
         </div>
       </aside>
 
@@ -49,4 +45,4 @@ function AdminPanel() {
   );
 }
 
-export default AdminPanel;
+export default SellerDashboard;

@@ -1,17 +1,24 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { MdEdit } from "react-icons/md";
+import { MdEdit, MdDelete } from "react-icons/md";
 import { toast } from "react-toastify";
-import EditUserModal from "../modals/EditUserModal.jsx";
+import EditUserRoleModal from "../modals/EditUserRoleModal.jsx";
+import DeleteUserModalByAdmin from "../modals/DeleteUser.jsx";
 
 const AllUser = () => {
   const [alluser, setAllUser] = useState([]);
-  const [modal, setModal] = useState(false);
+  const [rollChangeModal, setRollChangeModal] = useState(false);
+  const [DeleteUserModal, setDeleteUserModal] = useState(false);
   const [selctedUser, setSelctedUser] = useState(null);
+  const [emailForDelete, setEmailForDelete] = useState();
 
-  const openModal = (user) => {
+  const openRoleChangeModal = (user) => {
     setSelctedUser(user);
-    setModal(true);
+    setRollChangeModal(true);
+  };
+  const openDeleteUserModal = (user) => {
+    setEmailForDelete(user.email);
+    setDeleteUserModal(true);
   };
 
   const userList = async () => {
@@ -26,7 +33,7 @@ const AllUser = () => {
   };
   useEffect(() => {
     userList();
-  }, []);
+  }, [alluser]);
   return (
     <div className="p-4 ">
       <table className="border-collapse border border-slate-200 w-full bg-white">
@@ -37,6 +44,7 @@ const AllUser = () => {
             <th className="border border-slate-200">email</th>
             <th className="border border-slate-200">role</th>
             <th className="border border-slate-200">action</th>
+            <th className="border border-slate-200">delete</th>
           </tr>
         </thead>
         <tbody>
@@ -49,22 +57,41 @@ const AllUser = () => {
               <td className="border border-slate-200">
                 <button
                   onClick={() => {
-                    openModal(user);
+                    openRoleChangeModal(user);
                   }}
                 >
                   <MdEdit className="bg-green-200 rounded-full text-3xl p-1 hover:bg-green-400 hover:text-white" />
                 </button>
-                {modal && (
-                  <EditUserModal
+                {rollChangeModal && (
+                  <EditUserRoleModal
                     userFunc={userList}
                     user={selctedUser}
                     onclose={() => {
-                      setModal(false);
+                      setRollChangeModal(false);
                     }}
                   />
                 )}
                 {/* emne na dile direct user pathaye dle always last r ta pawa jay */}
               </td>
+
+              {/* acc delete */}
+              {/* <td className="border border-slate-200">
+                <button
+                  onClick={() => {
+                    openDeleteUserModal(user);
+                  }}
+                >
+                  <MdDelete className="bg-green-200 rounded-full text-3xl p-1 hover:bg-green-400 hover:text-white" />
+                </button>
+                {DeleteUserModal && (
+                  <DeleteUserModalByAdmin
+                    email={emailForDelete}
+                    onclose={() => {
+                      setDeleteUserModal(false);
+                    }}
+                  />
+                )}
+              </td> */}
             </tr>
           ))}
         </tbody>

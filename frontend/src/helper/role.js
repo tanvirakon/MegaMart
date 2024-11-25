@@ -1,5 +1,6 @@
 const role = {
   admin: "admin",
-  generel: "generel",
+  seller: "seller",
+  buyer: "buyer",
 };
 export default role;

@@ -12,6 +12,7 @@ import Signup from "./pages/SIgnup";
 import { useDispatch } from "react-redux";
 import { setUserDetails } from "./store/userSlice";
 import AdminPanel from "./pages/AdminPanel";
+import SellerDashboard from "./pages/SellerDashboard";
 import AllUser from "./pages/AllUser";
 import AllProducts from "./pages/AllProducts";
 import Home from "./pages/Home";
@@ -70,8 +71,14 @@ function App() {
             <Route path="/success" element={<Done />} />
             <Route path="/error" element={<Fail />} />
             <Route path="admin-panel" element={<AdminPanel />}>
-              <Route index element={<AllProducts />} />
+              <Route index element={<AllUser />} />
               {/* by default AllProducts select hye tkbe */}
+              <Route path="all_user" element={<AllUser />} />
+            </Route>
+            
+            {/* seller dashboard */}
+            <Route path="/seller_dashboard" element={<SellerDashboard />}>
+              <Route index element={<AllProducts />} />
               <Route path="all_user" element={<AllUser />} />
               <Route path="upload_products" element={<AllProducts />} />
             </Route>
