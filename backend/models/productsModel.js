@@ -29,12 +29,14 @@ const productUploadSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    sellingPrice: {
+      type: Number,
+    },
   },
   {
     timestamps: true,
   }
 );
-
 
 const productsUploadModel = mongoose.model("product", productUploadSchema);
 

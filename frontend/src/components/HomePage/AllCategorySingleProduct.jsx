@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
-import ShowProductByCategory from "../../pages/ShowProductsByCategory.jsx";
 import { Link } from "react-router-dom";
 
 const AllCategorySingleProduct = () => {

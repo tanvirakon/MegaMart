@@ -13,14 +13,13 @@ const SearchPage = () => {
   const [allProduct, setAllProduct] = useState([]);
   const se = async () => {
     const a = await axios.get(`http://localhost:3000/search/${category}`);
-    console.log("a---", a.data.data);
     if (a.data.success) setAllProduct(a.data.data);
     else setAllProduct([]);
   };
-  const handleAddToCart = async (e, id) => {
-    await addToCart(e, id);
-    fetchProductCountInCart();
-  };
+  // const handleAddToCart = async (e, id) => {
+  //   await addToCart(e, id);
+  //   fetchProductCountInCart();
+  // };
   useEffect(() => {
     se();
   }, [category]);

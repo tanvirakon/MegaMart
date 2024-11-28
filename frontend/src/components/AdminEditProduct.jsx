@@ -16,6 +16,7 @@ const AdminEditProduct = ({ data, onclose, fetchAllProduct }) => {
     productImage: data.productImage || [],
     category: data.category,
     price: data.price,
+    sellingPrice: data.sellingPrice || data.price,
   });
   const handleChange = (e) => {
     const { value, name } = e.target;
@@ -169,6 +170,19 @@ const AdminEditProduct = ({ data, onclose, fetchAllProduct }) => {
             className="border p-2 bg-slate-50 rounded"
             placeholder="0"
             value={productData.price}
+            onChange={handleChange}
+          />
+
+          <label htmlFor="SellingPrice" className="mt-3">
+            selling price :
+          </label>
+          <input
+            type="number"
+            name="sellingPrice"
+            id="sellingPrice"
+            className="border p-2 bg-slate-50 rounded"
+            placeholder="0"
+            value={productData.sellingPrice}
             onChange={handleChange}
           />
 

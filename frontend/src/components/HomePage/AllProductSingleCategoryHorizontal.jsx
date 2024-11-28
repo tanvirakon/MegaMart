@@ -73,11 +73,44 @@ const AllProductSingleCategoryHorizontal = ({ category, heading }) => {
                   {i?.productName}
                 </p>
                 <p className="ml-4 mt-3 opacity-50">{i?.brandName}</p>
-                <p className="mt-3 ml-4 flex items-center font-semibold text-red-600">
-                  <TbCurrencyTaka /> {i?.price}
-                </p>
+                <div className="flex gap-0">
+                  {i?.price != i?.sellingPrice &&
+                  i.sellingPrice != undefined ? (
+                    <div className="mt-3 ml-4 flex items-center font-semibold text-red-600">
+                      <TbCurrencyTaka /> {i?.sellingPrice}
+                    </div>
+                  ) : null}
+
+                  <div
+                    className={`mt-3  flex items-center  ${
+                      i?.price !== i?.sellingPrice &&
+                      i?.sellingPrice !== undefined
+                        ? "text-grey-600 line-through ml-1 font-thin"
+                        : "text-red-600 font-semibold ml-4"
+                    }`}
+                  >
+                    <TbCurrencyTaka /> {i?.price}
+                  </div>
+                </div>
+                {i?.price != i?.sellingPrice && i?.sellingPrice != undefined ? (
+                  <div className=" ml-4 flex items-center">
+                    <p className="font-thin text-sm">
+                      off :{" "}
+                      {Math.ceil(
+                        ((i?.price - i?.sellingPrice) * 100) / i?.price
+                      )}
+                      %
+                    </p>
+                  </div>
+                ) : null}
+
                 <button
-                  className="mt-6 ml-4  font-semibold bg-red-600 text-white px-3 py-1 rounded-full hover:bg-red-700"
+                  className={`ml-4 font-semibold bg-red-600 text-white px-3 py-1 rounded-full hover:bg-red-700 ${
+                    i?.price !== i?.sellingPrice &&
+                    i?.sellingPrice !== undefined
+                      ? " mt-1"
+                      : " mt-6"
+                  }`}
                   onClick={(e) => {
                     handleAddToCart(e, i?._id);
                   }}

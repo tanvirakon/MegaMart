@@ -74,10 +74,27 @@ const ProductDetails = () => {
             {productData?.productName}
           </h1>
           <h1 className="text-lg text-slate-400">{productData?.category}</h1>
-          <p className="flex text-3xl items-center text-red-500 mt-3 font-semibold ">
-            <TbCurrencyTaka />
-            {productData.price}
-          </p>
+
+          <div className="flex gap-0">
+            {productData?.price != productData?.sellingPrice &&
+            productData.sellingPrice != undefined ? (
+              <div className="mt-3 flex items-center font-semibold text-red-600">
+                <TbCurrencyTaka /> {productData?.sellingPrice}
+              </div>
+            ) : null}
+
+            <div
+              className={`mt-3  flex items-center  ${
+                productData?.price !== productData?.sellingPrice &&
+                productData?.sellingPrice !== undefined
+                  ? "text-grey-600 line-through ml-2 font-thin"
+                  : "text-red-600 font-semibold "
+              }`}
+            >
+              <TbCurrencyTaka /> {productData?.price}
+            </div>
+          </div>
+
           <div className="flex w-fit gap-4 mt-4 font-semibold">
             <button
               className="outline outline-red-600 text-red-600 outline-1 px-3 py-1 rounded hover:bg-red-600 hover:text-white"

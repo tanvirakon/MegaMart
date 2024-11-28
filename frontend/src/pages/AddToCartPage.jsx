@@ -60,7 +60,7 @@ const AddToCartPage = () => {
   const totalPriceOfProducts = () => {
     let sum = 0;
     allProductDetailsInCart?.map((i, j) => {
-      sum += i?.price * cartData[j]?.productQuantity;
+      sum += i?.sellingPrice * cartData[j]?.productQuantity;
     });
     setTotalPrice(sum);
   };
@@ -189,8 +189,13 @@ const AddToCartPage = () => {
                       {i?.productName}
                     </p>
                     <p className="text-small font-light">{i?.category}</p>
+
                     <p className="mt-2 mb-2 flex items-center font-semibold text-red-600">
-                      <TbCurrencyTaka /> {i?.price}
+                      <TbCurrencyTaka />
+                      {i?.price != i?.sellingPrice &&
+                      i.sellingPrice != undefined
+                        ? i?.sellingPrice
+                        : i?.price}
                     </p>
                     <div className="gap-2 flex">
                       <button
@@ -231,7 +236,7 @@ const AddToCartPage = () => {
                         <TbCurrencyTaka />
                         {netCostOfProduct(
                           cartData[j]?.productQuantity,
-                          i?.price
+                          i?.sellingPrice||i?.price
                         )}
                       </p>
                     </div>
@@ -253,8 +258,18 @@ const AddToCartPage = () => {
               <p>{totalPrice}</p>
             </div>
             <div className="text-xl mt-2 text-center flex gap-2 w-full">
-              <button onClick={stripePayment} className="bg-red-500 text-white w-full h-14 hover:bg-red-600 rounded-md">pay with stripe</button>
-              <button onClick={sslcommerzPayment} className="bg-red-500 text-white w-full h-14 hover:bg-red-600 rounded-md">pay with sslcommerz</button>
+              <button
+                onClick={stripePayment}
+                className="bg-red-500 text-white w-full h-14 hover:bg-red-600 rounded-md"
+              >
+                pay with stripe
+              </button>
+              <button
+                onClick={sslcommerzPayment}
+                className="bg-red-500 text-white w-full h-14 hover:bg-red-600 rounded-md"
+              >
+                pay with sslcommerz
+              </button>
             </div>
           </div>
         </div>

@@ -19,6 +19,7 @@ const UploadProductModal = ({ onclose, fetchAllProduct }) => {
     productImage: [],
     category: "",
     price: "",
+    sellingPrice: "",
   });
   const handleChange = (e) => {
     const { value, name } = e.target;
@@ -172,6 +173,19 @@ const UploadProductModal = ({ onclose, fetchAllProduct }) => {
             className="border p-2 bg-slate-50 rounded"
             placeholder="0"
             value={productData.price}
+            onChange={handleChange}
+          />
+
+          <label htmlFor="sellingPrice" className="mt-3">
+            selling price :
+          </label>
+          <input
+            type="number"
+            name="sellingPrice"
+            id="sellingPrice"
+            className="border p-2 bg-slate-50 rounded"
+            placeholder="0"
+            value={productData.sellingPrice}
             onChange={handleChange}
           />
 

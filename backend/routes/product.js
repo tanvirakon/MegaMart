@@ -33,6 +33,8 @@ router.get("/get_all_products", async (req, res) => {
 router.put("/update_product/:id", async (req, res) => {
   try {
     const { id } = req.params;
+    console.log(req.body);
+
     const editProduct = await productsUploadModel.findByIdAndUpdate(
       id,
       req.body,

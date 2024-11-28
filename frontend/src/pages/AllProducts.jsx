@@ -23,7 +23,7 @@ function AllProducts() {
           className="bg-red-500 px-3 py-2 rounded-xl text-white"
           onClick={() => setUpload_productModal(true)}
         >
-          upload_products
+          upload new product
         </button>
       </div>
 

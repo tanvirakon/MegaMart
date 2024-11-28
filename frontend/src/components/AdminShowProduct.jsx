@@ -15,7 +15,21 @@ const ShowProduct = ({ product, fetchAllProduct }) => {
       />
       <p className="mt-2 line-clamp-2">{product?.productName}</p>
       {/* 2 line r pr shb dotted hye jbe */}
-      <p className="mt-2 mb-2 flex items-center font-semibold">
+      {product?.price != product?.sellingPrice &&
+      product?.sellingPrice != undefined ? (
+        <p className="mt-2 mb-2 flex items-center font-semibold">
+          <TbCurrencyTaka /> {product?.sellingPrice}
+        </p>
+      ) : null}
+
+      <p
+        className={
+          product?.price != product?.sellingPrice &&
+          product?.sellingPrice != undefined
+            ? "mt-2 mb-2 flex items-center font-semibold line-through font-extralight"
+            :  "mt-2 mb-2 flex items-center font-semibold"
+        }
+      >
         <TbCurrencyTaka /> {product?.price}
       </p>
 

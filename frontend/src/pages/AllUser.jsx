@@ -75,7 +75,7 @@ const AllUser = () => {
               </td>
 
               {/* acc delete */}
-              {/* <td className="border border-slate-200">
+              <td className="border border-slate-200">
                 <button
                   onClick={() => {
                     openDeleteUserModal(user);
@@ -91,7 +91,7 @@ const AllUser = () => {
                     }}
                   />
                 )}
-              </td> */}
+              </td>
             </tr>
           ))}
         </tbody>
