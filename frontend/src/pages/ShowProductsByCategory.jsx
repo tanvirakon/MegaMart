@@ -5,6 +5,10 @@ import axios from "axios";
 import MapOfAllProduct from "../helper/MapOfAllProduct.jsx";
 
 const ProductsByCategory = () => {
+  //
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
+  //
   const { product } = useParams();
   const [data, setData] = useState([]);
   const [checkedProducts, setCheckedProducts] = useState([product]);
@@ -36,8 +40,9 @@ const ProductsByCategory = () => {
   useEffect(() => {
     fetchData(checkedProducts);
   }, [checkedProducts]);
+
   const sorting = (e) => {
-    const sortingMethod = e.target.id;
+    const sortingMethod = e.target.id; //input 2 , input 1
     if (data) {
       const newData = [...data]; //creates a new array that is a shallow copy of data. Now, newData and data do not reference the same array, and sorting newData does not directly alter data. tai setData() kaj krbe
       if (sortingMethod == "input1") newData.sort((a, b) => a.price - b.price);
@@ -46,6 +51,23 @@ const ProductsByCategory = () => {
       setData(newData);
     }
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const minPriceNumber = Number(minPrice); //number e convert
+    const maxPriceNumber = Number(maxPrice);
+
+    const filteredData = data.filter(
+      (item) =>
+        (!minPriceNumber || item.price >= minPriceNumber) &&
+        (!maxPriceNumber || item.price <= maxPriceNumber)
+    );
+    console.log("data", data);
+    console.log("filteredData", filteredData);
+
+    setData(filteredData);
+  };
+
   return (
     <div className="mx-4 mt-4 flex gap-2">
       {/* left */}
@@ -75,6 +97,41 @@ const ProductsByCategory = () => {
               <label htmlFor="input2"> price high to low</label>
             </div>
           </form>
+
+          {/* hasi mam work ---- price range*/}
+          {/* <div>
+            <h3 className="text-2xl font-normal mb-2 border-b-2 border-gray-300">
+              Price Range
+            </h3>
+            <form onSubmit={handleSubmit}>
+              <div>
+                <label htmlFor="minPrice">Min:</label>
+                <input
+                  id="minPrice"
+                  type="number"
+                  value={minPrice}
+                  onChange={(e) => setMinPrice(e.target.value)}
+                  className="border rounded px-2 py-1 mx-2"
+                />
+              </div>
+              <div>
+                <label htmlFor="maxPrice">Max:</label>
+                <input
+                  id="maxPrice"
+                  type="number"
+                  value={maxPrice}
+                  onChange={(e) => setMaxPrice(e.target.value)}
+                  className="border rounded px-2 py-1 mx-2"
+                />
+              </div>
+              <button
+                type="submit"
+                className="bg-blue-500 text-white px-4 py-2 rounded mt-2"
+              >
+                Apply
+              </button>
+            </form>
+          </div> */}
 
           <h3 className="text-2xl font-normal mb-2 border-b-2 border-gray-300 mt-4">
             category

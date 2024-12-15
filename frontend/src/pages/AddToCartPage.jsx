@@ -60,7 +60,7 @@ const AddToCartPage = () => {
   const totalPriceOfProducts = () => {
     let sum = 0;
     allProductDetailsInCart?.map((i, j) => {
-      sum += i?.sellingPrice * cartData[j]?.productQuantity;
+      sum += (i?.sellingPrice || i?.price) * cartData[j]?.productQuantity;
     });
     setTotalPrice(sum);
   };
@@ -89,7 +89,6 @@ const AddToCartPage = () => {
   const dltProductFromCart = async (productId, userId) => {
     setUndoButtonShow(true);
     setLastDeleteItem({ productId: productId, userId: userId });
-    console.log(productId);
     const dlt = await axios.delete(
       `http://localhost:3000/cart/dltProduct/${productId}/${userId}`
     );
@@ -236,7 +235,7 @@ const AddToCartPage = () => {
                         <TbCurrencyTaka />
                         {netCostOfProduct(
                           cartData[j]?.productQuantity,
-                          i?.sellingPrice||i?.price
+                          i?.sellingPrice || i?.price
                         )}
                       </p>
                     </div>

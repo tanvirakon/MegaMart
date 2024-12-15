@@ -26,7 +26,7 @@ const ShowProduct = ({ product, fetchAllProduct }) => {
         className={
           product?.price != product?.sellingPrice &&
           product?.sellingPrice != undefined
-            ? "mt-2 mb-2 flex items-center font-semibold line-through font-extralight"
+            ? "mt-2 mb-2 flex items-center  line-through font-extralight"
             :  "mt-2 mb-2 flex items-center font-semibold"
         }
       >

@@ -7,7 +7,7 @@ import { ImCloudUpload } from "react-icons/im";
 import uploadProductImages from "../helper/uploadProductImages.js";
 import { MdDelete } from "react-icons/md";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import { useSelector } from "react-redux";
 
 const UploadProductModal = ({ onclose, fetchAllProduct }) => {
@@ -41,7 +41,6 @@ const UploadProductModal = ({ onclose, fetchAllProduct }) => {
     });
   };
   const dltPic = (index) => {
-    console.log(index);
     const newImageArray = productData.productImage;
     newImageArray.splice(index, 1);
     setProductData((prev) => {
@@ -53,18 +52,20 @@ const UploadProductModal = ({ onclose, fetchAllProduct }) => {
   };
   const formSubmit = async (e) => {
     e.preventDefault();
-    if (userInfo.role == "admin") {
-      await axios
-        .post("http://localhost:3000/product/upload", productData)
-        .then((res) => {
-          toast.success(res.data.message);
-          fetchAllProduct();
-        })
-        .catch((err) => {
-          console.log(err);
-          toast.error("error occured. check console!!");
-        });
-    } else toast.error("you are not admin");
+    if (userInfo.role == "seller") {
+      if (productData.price >= productData.sellingPrice) {
+        await axios
+          .post("http://localhost:3000/product/upload", productData)
+          .then((res) => {
+            toast.success(res.data.message);
+            fetchAllProduct();
+          })
+          .catch((err) => {
+            console.log(err);
+            toast.error("error occured. check console!!");
+          });
+      } else toast.error("selling price cant be higher ");
+    } else toast.error("you are not seller");
     onclose();
   };
   const modalRef = useRef();
