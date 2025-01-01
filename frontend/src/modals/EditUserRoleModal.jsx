@@ -5,7 +5,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 const EditUserRoleModal = ({ user, onclose, userFunc }) => {
-  const [userRole, setUserRole] = useState("admin");
+  const [userRole, setUserRole] = useState("seller");
   const modalRef = useRef();
   const closeModal = (e) => {
     if (modalRef.current == e.target) onclose();

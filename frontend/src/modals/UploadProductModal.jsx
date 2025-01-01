@@ -52,6 +52,7 @@ const UploadProductModal = ({ onclose, fetchAllProduct }) => {
   };
   const formSubmit = async (e) => {
     e.preventDefault();
+    console.log(userInfo.role);
     if (userInfo.role == "seller") {
       if (productData.price >= productData.sellingPrice) {
         await axios
