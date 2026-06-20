@@ -1,0 +1,914 @@
+[{
+  "_id": {
+    "$oid": "668a1cd2d1db2255e831514e"
+  },
+  "productName": "Apple AirPods 3rd gen",
+  "brandName": "Apple",
+  "description": "Apple AirPods 3rd generation with Charging Case\nThe All-new Apple AirPods 3rd generation comes with Spatial Audio and dynamic head tracking that places sound all around you. It is equipped with Adaptive EQ that tunes the music to your ears. Inward-facing microphones detect what youâ€™re hearing, then adjust low- and mid-range frequencies to deliver the rich details in every song, customized for you in real-time. The force sensor gives you control over your entertainment. You can press to play, pause, skip through songs, or answer and end calls. It also has a longer battery life that charges up in a snap. You can Wirelessly and effortlessly recharge the MagSafe Charging Case on a MagSafe charger. The case gives you up to 30 hours of total listening time and charging AirPods in the case for just 5 minutes generates around an hour of listening time. It is equipped with an enhanced skin-detect sensor that knows the difference between your ear and other surfaces, so audio only plays when youâ€™re wearing AirPods and pauses when theyâ€™re in your pocket or on a table. You can track down your AirPods with the Find My app. See how close they are with proximity view, get separation alerts if theyâ€™re out of Bluetooth range. It has an IPX4 rating for Sweat & Water Resistance. Both AirPods and the MagSafe Charging Case are rated IPX4 sweat and water-resistant, so theyâ€™ll withstand anything from rain to heavy workouts. The Apple AirPods 3rd generation comes with no warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720327331/jyesb3fjoibcg2jzos8g.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720327340/cot58qjnnc8c3uvnh6al.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720327346/fa0swis8ti0avnppjcgm.jpg"
+  ],
+  "category": "airpodes",
+  "price": 23500,
+  "createdAt": {
+    "$date": "2024-07-07T04:42:58.648Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T04:48:50.630Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a1e10d1db2255e8315152"
+  },
+  "productName": "Apple AirPods Pro 2nd Gen",
+  "brandName": "Apple",
+  "description": "Apple AirPods Pro 2nd Generation Wireless Earbuds with USB C Charging Case\nThe H2 chip enables a more tailored audio experience with Apple's 2nd generation AirPods Pro with Wireless MagSafe Charging Case, now with worldwide USB-C compatibility. The chip collaborates with a custom-built low-distortion driver, amplifier, and inward-facing mic in each ear to offer crisp highs, strong bass, and music that is tailored to your ear shape as you hear it. They also introduce a new dimension of sound with immersive Spatial Audio, which transports you to the stage alongside the band. Other improvements to the AirPods Pro include ANC with double the canceling strength, a transparency mode that adjusts to high-decibel noises, and more. But wait, there's more: when you pair your AirPods Pro with the separately available Apple Vision Pro, the H2 chip in these devices will communicate to transfer audio data at blisteringly fast speeds, delivering fully lossless audio with extremely low latency and elevating your mobile audio experience to incredible new heights. The Airpods Pro comes with four different sizes of silicone ear tip pairs as well as a USB-C charging cord.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720327643/suwihup2yfqkb8l8cr24.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720327672/iieakfts3wio0qc1ywyl.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720327679/f06ffeitppaardeehaui.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720327685/va9nah1f6exakxlcr6lu.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720327691/n4xcfhb8zdyo74jwwfch.webp"
+  ],
+  "category": "airpodes",
+  "price": 32900,
+  "createdAt": {
+    "$date": "2024-07-07T04:48:16.772Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T04:50:16.815Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a2281d1db2255e8315166"
+  },
+  "productName": "Apple AirPods Max",
+  "brandName": "Apple",
+  "description": "Apple AirPods Max\nThe Apple AirPods Max have a stylish appearance and high-quality construction for excellent audio performance. It also has a fantastic active noise cancellation technology and a transparency mode that allow it to create high-quality audio noise-free. You can enjoy comfort when wearing and listening to music using AirPods. All things considered, it strikes the ideal balance between the seamless magic of AirPods and thrilling high-fidelity audio. The headphones provide the most comfortable and personalized listening experience.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720328795/rygah3fkwmlwo6satty6.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720328806/dvklzhfoaityt2isggzl.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720328810/tcpkotbhscizypqeednv.webp"
+  ],
+  "category": "airpodes",
+  "price": 69000,
+  "createdAt": {
+    "$date": "2024-07-07T05:07:13.339Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T05:07:13.339Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a2395d1db2255e831516b"
+  },
+  "productName": "SJCAM SJ4000 Air Digital",
+  "brandName": "SJCAM",
+  "description": "SJCAM SJ4000 Air Full Hd Wi-Fi Waterproof Sports Action Camera\nThe SJCAM SJ4000 Air has full HD resolution recording at 1920x1080. Wide Dynamic Range (WDR) allows you to Capture warm and vivid Picturesque scenes with the SJ4000. It detects motion to make your movie clips sharp and exciting. The SJ4000 Air focuses on image quality and affordability. Although not waterproof out of the box, it comes with a 98' waterproof housing, which is also used to attach the camera to one of the several mounts included, such as the helmet mount. One of the recording resolutions is 720p at up to a high frame rate of 120 fps for achieving professional-like slow motion in editing. It features a built-in mic and speaker, a microSD card slot for recording, and built-in Wi-Fi for connecting to the companion iOS/Android SJCAM app. The mobile app allows you to control select functions of the camera remotely as well as set up time-lapse sessions and use other creative tools. This action camera has a removable battery that runs approximately 70 minutes when recording Full HD 1080p video. The battery is rechargeable by connecting the camera to a USB power source using an included cable. The USB port is also used for offloading your photos and videos to your computer for storage, editing, and sharing. The SJCAM SJ4000 Air has no warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720329080/ybrhfoxz3fk7xrqsilq5.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720329084/bcp0rfkizzmcr3cbcqen.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720329091/fve613tggc8m8buf6l39.jpg"
+  ],
+  "category": "camera",
+  "price": 4600,
+  "createdAt": {
+    "$date": "2024-07-07T05:11:49.024Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T05:11:49.024Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a2478d1db2255e8315171"
+  },
+  "productName": "SJCAM SJ4000 Dual Screen Full HD",
+  "brandName": "SJCAM",
+  "description": "SJCAM SJ4000 Dual Screen Full HD WiFi Waterproof Sports Action Camera\nThe SJCAM SJ4000 Dual Screen Full HD WiFi Waterproof Sports Action Camera is a versatile and durable camera designed for adventure enthusiasts. With its 170° ultra-wide angle lens and 16MP camera, it allows you to capture stunning photos and videos in Full HD quality. Whether you're hiking, biking, surfing, or engaging in any other thrilling activity, this action camera is built to accompany you every step of the way. The SJCAM SJ4000 is a dual-screen design. It features a 2.0\" high-definition main screen on the back and a 1.3\" front screen, enabling you to easily frame your shots and preview your footage while you're on the move. This dual-screen setup is particularly beneficial for capturing self-portraits or group shots, as it allows you to see exactly what's being captured in real-time. Thanks to its WiFi compatibility, you can connect the camera to your smartphone or tablet and remotely control it from a distance of up to 10 meters. This feature comes in handy when you want to position the camera in hard-to-reach places or capture shots from unique angles. You can also conveniently transfer your photos and videos wirelessly to your mobile device for instant sharing with friends and family. The SJCAM SJ4000 is built to withstand the elements. It comes with durable waterproof housing that enables you to take the camera underwater to depths of up to 30 meters. Whether you're snorkeling, diving, or simply enjoying a day at the beach, this camera allows you to capture the mesmerizing underwater world with ease. The SJCAM SJ4000 Dual Screen Full HD WiFi Waterproof Sports Action Camera is a reliable and feature-packed device for capturing your adventures. With its dual screens, wide-angle lens, WiFi connectivity, and waterproof housing, it empowers you to unleash your creativity and document your thrilling experiences in stunning detail.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720329297/wdkbufagqoovtotn9o6f.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720329303/drlocy6qgmif18yc4muz.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720329308/ez97ail0fg6dbzblbkkq.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720329312/uauhkb4hke8sygkg6vyf.webp"
+  ],
+  "category": "camera",
+  "price": 6000,
+  "createdAt": {
+    "$date": "2024-07-07T05:15:36.918Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T05:15:36.918Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a2527d1db2255e8315174"
+  },
+  "productName": "AKASO V50X 20MP 4K Waterproof ",
+  "brandName": "AKASO",
+  "description": "AKASO V50X 20MP 4K Waterproof Touch Screen Wifi Action Camera\nThe AKASO V50X can shoot 4K full HDR video at 30FPS and HD video at up to 90FPS; deliver steady video in motion with electronic image stabilization. It features 2-inch Touch Screen with IPS Display. It comes with 20 megapixels resolution that enables the camera to deliver sharp and crisp photos. It is equipped with a 170Â° Wide-angle Lens. The field of view can be adjusted from 70Â°, 110Â°, 140Â° to 170Â° for the camera to capture more of a great scene. The V50 X can shoot 4K videos at 30 frames per second (FPS), making it easier to track fast-moving subjects. It supports 4K/30fps, 2.7K/30fps, and 2K/30fps Video Recording. The V50 X has a durable design and it is waterproof to 131ft (40m) with housing. With the AKASO Go app, you can seamlessly move photos and videos to your phone, edit, play footage, and share. It also features Diving Mode, Distortion Calibration, H.265 Video Codec, Still Photo, Burst Photo, Time Lapse Photo, Time Lapse Video, Slow Motion Video, Loop Recording, Driving Mode, WDR, White Balance, ISO, Audio Record, Micro HDMI, and Micro USB. The AKASO V50X comes with no warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720329489/m8pyfgj8kivjcqztovgt.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720329493/p69t6lu076ek80uwignh.jpg"
+  ],
+  "category": "camera",
+  "price": 10700,
+  "createdAt": {
+    "$date": "2024-07-07T05:18:31.340Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T05:18:31.340Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a259ad1db2255e8315177"
+  },
+  "productName": "Sony ZV-E10 24.2MP 4k",
+  "brandName": "Sony",
+  "description": "Sony ZV-E10 24.2MP 4k Touchscreen Vlogging Digital Camera with 16-50mm Lens\nThe Sony ZV-E10 is designed to capture amazing videos of you and your world, without any tricky setup. It makes all skin colors look vibrant, natural and healthy. There's also an optional Soft Skin Effect mode for a smoother look. The Sony ZV-E10's Fast Hybrid AF system lets you simply and quickly switch focus from a face to the background, for more stylistic and watchable videos. By just pushing the Bokeh switch, you can switch background bokeh on and off â€” no need for complex manual adjustments. Now it's easy to simply select a professional-looking defocused background, or keep the entire scene in focus, with just the press of a button. Product Showcase Setting allows you to switch with just a single button press to settings that are perfect for product reviews. It widens the angle of view and switches the focus to the object instantly, so you don't need to wait for the focus to shift or place your hand behind the product to shift the focus to it. The Sony ZV-E10 is built to get great shots while you're moving. With amazing image stabilization, you can shoot smooth video when walking, and as the light goes from shadow to sun or outdoors to in, the automatic exposure (AE) tracks faces and makes sure they always appear well-lit. The Sony ZV-E10 is designed to bring together simplicity and power, opening up creative opportunities as wide as your imagination. There's no longer a need to compromise your images with your smartphone camera just to share content quickly. The vari-angle LCD touchscreen flips out horizontally, making it perfect for selfies and vlogging. Clear of ports, microphones, and mounting shoes, it allows for precise framing and fluid operation even while in front of the camera. Carry professional-quality video along in your pocket, with stunning 4K HDR detail and powerful exposure tools for content guaranteed to impress. Check out the features of the Sony ZV-E10 for vlogging and content creation. The Imaging Edge Webcam application makes it easy to use your Sony camera as a high-quality webcam, with wide compatibility, for impressive live-streaming and conferencing. The Sony ZV-E10 comes with no warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720329601/pd0lw7pbzfhpu7icjumc.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720329606/wfdpdufm0zlwwxbwryup.jpg"
+  ],
+  "category": "camera",
+  "price": 80000,
+  "createdAt": {
+    "$date": "2024-07-07T05:20:26.057Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T05:20:26.057Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a276ed1db2255e8315188"
+  },
+  "productName": "FUJIFILM X100V Digital Camera",
+  "brandName": "FUJIFILM",
+  "description": "FUJIFILM X100V Digital Camera\nThe Fujifilm X100V 26.1MP Digital Camera is the fifth iteration of the X100 series, combining exceptional image capabilities, a distinct design with an ideal primary wide-angle lens, and a versatile feature-set to meet a wide range of shooting demands. The APS-C-format 26.1MP X-Trans CMOS 4 sensor used in the X100V allows for high-resolution recording as well as support for DCI/UHD 4K video, sensitivity from ISO 160-12800, and continuous shooting at up to 11 fps with the mechanical shutter. The sensor's BSI design reduces noise and improves overall clarity, and it is combined with the X-Processor 4 for quicker performance and responsiveness. The sensor's architecture also allows for a hybrid autofocus system, which combines 425 phase-detection points with a contrast detection system for fast and precise AF performance.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720330058/kdjis0uyqiwzvkw6tnta.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720330065/o6zadxktuxrkcou0xqek.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720330071/awtshas8k4eh76f80wnm.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720330076/c7aod7sadu02tsuslfwl.webp"
+  ],
+  "category": "camera",
+  "price": 195500,
+  "createdAt": {
+    "$date": "2024-07-07T05:28:14.955Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T05:28:14.955Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a27ced1db2255e831518b"
+  },
+  "productName": "SONY CYBER-SHOT W810 20MP,6X ZOOM ",
+  "brandName": "SONY",
+  "description": "SONY CYBER-SHOT W810 20MP,6X ZOOM HD DIGITAL CAMERA\nSony W810, Resolution (MP) - 20.1 Mega pixel, Sensor Type - Super HAD CCD, Lense - Sony Lens, Display (Inch) - 2.7\" TFT Display, Front Display - No, Optical Zoom (X) - 6x Optical Zoom, Shutter Speed (sec) - 2 - 1/1500 Sec., Face Detection - Yes, Red-Eye Reduction - Yes, Sweep Panorama - Yes, Video (Res.) - Res. 1280 x 720, Memory Type - SD/SDHC/SDXC/Micro SD/Micro SDHC Supported, Internal Memory (MB) - 27 MB, USB - Hi-Speed USB, Battery - Li-ion Battery, Weight (gm) - 120g,Color - Black",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720330157/srlyo77n4bggvugxcltw.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720330163/fbwnprshkymhpmudwkre.jpg"
+  ],
+  "category": "camera",
+  "price": 96000,
+  "createdAt": {
+    "$date": "2024-07-07T05:29:50.064Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T05:29:50.064Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a280dd1db2255e831518e"
+  },
+  "productName": "SONY HDR-CX405 9.2MP 30X OPTICAL ZOOM ",
+  "brandName": "SONY",
+  "description": "SONY HDR-CX405 9.2MP 30X OPTICAL ZOOM FULL HD HANDYCAM\nSony HDR-CX405, Resolution - XAVC S HD: 1920 x 1080/ 50p, 25p, CCD Type - ZEISS Vario-Tessar, Total Pixel - 9.2 Pixel, Digital Zoom (X) - 350x, Optical Zoom (X) - 30x, Storage Media - Micro SD/SDHC/SDXC, Focus - Full range Focus, Image Size - L: 9.2 megapixels 16:9 (4032x2272), S: 2.1 megapixels 16:9 (1920x1080), Audio - Dolby Digital Stereo Creator, MPEG-4 AAC-LC 2ch, MPEG-4 Linear PCM 2ch(48kHz/16bit), Battery Type - NP-BX1 Rechargeable, Special Remarks - MICROPHONE:Built-in Zoom Microphone, Others - Face Detection: Yes, Shutter: 1/6-1/10000 sec., Warranty - 03 Years Service Warranty (No parts warranty).",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720330235/co4wiegqzluj8i7wbv35.png"
+  ],
+  "category": "camera",
+  "price": 30999,
+  "createdAt": {
+    "$date": "2024-07-07T05:30:53.502Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T05:30:53.502Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a2895d1db2255e8315191"
+  },
+  "productName": "GoPro HERO10 Black 23MP 5.3K Ultra HD",
+  "brandName": "GoPro",
+  "description": "GoPro HERO10 Black 23MP 5.3K Ultra HD Waterproof Touch Screen Action Camera\nThe GoPro HERO10 Black comes with a Revolutionary Processor. It is Faster. Smoother. Better. The powerful new GP2 engine changes the game's snappy performance, responsive touch controls, and double the frame rate for amazingly smooth footage. Designed specifically for the demanding nature of the GoPro, the GP2 system on a chip is by far our fastest ever. It has been upgraded to incredible 23MP photos and 5.3K video resolution at 60fps, HERO10 offers double the frame rate for amazingly smooth motion. Plus, there's 8x slo-mo at 2.7K and you can pause videos and grab 15.8MP still photos from 5.3K video that look amazing. Shoot with fine detail, realistic textures and stunning contrast, even in low light. Images look their best thanks to a new water-shedding hydrophobic lens cover that repels water while helping to eliminate lens flare and other artifacts. HyperSmooth has never been smoother, and it's easy to dial in the best stabilization at all times. Plus, get even better low-light performance and horizon leveling with a higher tilt limit, so your footage looks perfectly straight when you want it. Super easy, super fast. Transferring photos and videos from your cloud-connected GoPro to your phone is simple and versatile, with your choice of effortless wireless upload via the Quik app or a lightning-fast wired connection via USB. There's also unlimited cloud storage with hassle-free auto upload. Just plug in your camera when connected to your home Wi-Fi and the camera does the rest. The GoPro HERO10 has no warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720330356/z3qae6h4wgprlpxqwceb.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720330361/kqgyqnvw2nvvcgrya59k.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720330365/qbwoww0kmkgixwfdhqa1.jpg"
+  ],
+  "category": "camera",
+  "price": 36899,
+  "createdAt": {
+    "$date": "2024-07-07T05:33:09.280Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T05:33:09.280Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a2bfbd1db2255e8315197"
+  },
+  "productName": "DJI Action 2 Power Combo",
+  "brandName": "DJI ",
+  "description": "DJI Action 2 Power Combo 4K Action Camera\nThe DJI Action 2 Power Combo 4K Action Camera is paired with a power module, a magnetic lanyard for hands-free operation, and a magnetic 3-prong mount. The magnetic, snap-on power module boosts your runtime to 180 minutes and includes a microSD card slot for extra media storage. When paired with the separately available DJI Mic, which uses a 3.5mm to USB Type-C input adaptor, the Action 2 can capture wireless audio and record sound via an embedded mic. Grab the DJI Action 2 Power Combo to record up to 180 minutes of your daily life, sports endeavors, or vacation excursions. The Action 2's varied recording choices include 32GB of internal storage, up to DCI 4K60, UHD 4K120, and 1080p240 video, as well as up to 12MP raw and JPEG still photographs, and a unique snap-together, modular magnetic design. While the Action 2 is waterproof to 33', the Power Module requires a separately available case to be watertight. The DJI Action 2 Power Combo 4K Camera has no warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720331216/xwzkg85wmipbqrl8snai.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720331219/vjfdc4m6xwqqx1bqis6j.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720331222/o95hr7nyss5lfahlz0gg.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720331226/qbpt5rhpugpulamkujrm.jpg"
+  ],
+  "category": "camera",
+  "price": 25000,
+  "createdAt": {
+    "$date": "2024-07-07T05:47:39.189Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T05:47:39.189Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a2d43d1db2255e83151a2"
+  },
+  "productName": "ZOOOK Lava Metallic HD Earphones",
+  "brandName": "ZOOOK ",
+  "description": "The ZOOOK Lava Metallic HD Earphones A Richer Sound Experience Feel every note and hear every moment with the Lava earphones. Absorb and immerse yourself in a high-performance audio experience. One-Click A built-in microphone & playback control to ensure a full range of functions when the Lava earphones are plugged in. Ultra-Comfort Cushions Three different cushion sizes are provided to help you find the ideal fit. These ultra-comfort cushions enable passive noise isolation and the perfect grip Tangle-Free Use The Lava earphones have a lightweight cable design that minimizes tangled wires. The ZOOOK Lava Metallic HD Earphones have a 06-moths warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720331577/x3i1sixcduk7gbnzhx8b.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720331581/jgsi9vyvwifwquebq3qa.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720331584/j9oqgm4p1xs1nbelxegi.jpg"
+  ],
+  "category": "earphones",
+  "price": 800,
+  "createdAt": {
+    "$date": "2024-07-07T05:53:07.787Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T05:53:07.787Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a2d7fd1db2255e83151a5"
+  },
+  "productName": "Xiaomi Mi HSEJO3JY",
+  "brandName": "Xiaomi ",
+  "description": "The Xiaomi Mi HSEJ03JY 3.5mm Earphone Basic comes with Light and scratch-resistant, the aluminum sound chamber is anodized for a sleek finish and features an engraved to prevent it from slipping. Delicate details feel smooth in hand and add an elegant touch. The diaphragm uses a combination of aerospace-grade metal and PET to create a balanced and solid sound. Tuned and optimized across popular music genres including pop, rock, dance, and more. The stylish cable is designed with an inner cable wrapped in Kevlar for extra durability. The flat cable is smooth to the touch and is resistant to bends and tangles. Through extensive research, the main body is ergonomically angled to fit your ear canal for long-lasting comfort. This anti-slip design also prevents it from dropping out easily. The Xiaomi Mi HSEJ03JY 3.5mm Earphone Basic has no warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720331632/fqo2coamxm1mx766ab69.jpg"
+  ],
+  "category": "earphones",
+  "price": 648,
+  "createdAt": {
+    "$date": "2024-07-07T05:54:07.697Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T05:54:07.697Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a2db1d1db2255e83151a8"
+  },
+  "productName": "Recci REP-W09 Bluetooth Wireless Neckband ",
+  "brandName": "Recci",
+  "description": "Recci REP-W09 Bluetooth Wireless Neckband Earphone comes with HD sound quality, HD voice call, enjoy call and music within 10m Transmission range. The neckband earphone is featured with Material: ABS, BT version: V5.0, Charging Port: Micro-USB, Earphone Battery: 90mAh, Speaker Specification: 14.2mm, Stand by: 25 days and also provides Charging time: 1 hour, Music play time: 7 hours. This earphone provides you Comfortable and sturdy wearing experience withNeck-band design and also Releasing the burden on both ears, Wireless listening, get rid of the wired bondage, Stable and strong signal and it will Long-lasting in working time. This is Magnetically fixed to prevent earphones from tangling so that it is Easy to store and carry. The Recci REP-W09 Blutooth Wireless Neckband Earphone has no warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720331683/qdyktwippfnzccaq4guo.jpg"
+  ],
+  "category": "earphones",
+  "price": 650,
+  "createdAt": {
+    "$date": "2024-07-07T05:54:57.788Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T05:54:57.788Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a2de7d1db2255e83151ab"
+  },
+  "productName": "Lenovo HE05X II Neckband",
+  "brandName": "Lenovo ",
+  "description": "The Lenovo HE05X II is equipped with a 10mm driver that delivers stunning sound for an enjoyable listening experience. It comes with a high-performance Bluetooth V5.0 chip, low power consumption, and stable signal transmission are used in this new edition. It has a 3.7-volt, 110-mAh large-capacity battery that can last up to 12 hours. Using a carbon fiber composite diaphragm and large coil acoustic technology, you can restore the shocking sound quality of high frequency, intermediate frequency, and low frequency. It is equipped with Bluetooth 5.0 chips to ensure a stable and fast connection. The Lenovo HE05X II features IPX5 waterproof protection that can keep the rain and sweat far away. It has an excellent design, a 45° tilt, fits the ear canal, holds firmly and comfortably, and is not easy to fall off. The soft TPE material is skin-friendly and comfortable. intelligent wire control, realizing multi-function control such as music playback and calling. With an IPX5 waterproof rating, don’t worry about earphones being damaged by sweat. The Lenovo HE05X II has no warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720331738/jczu4gtnjtctwvdc1uos.jpg"
+  ],
+  "category": "earphones",
+  "price": 637,
+  "createdAt": {
+    "$date": "2024-07-07T05:55:51.482Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T05:55:51.482Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a3d5ad1db2255e83151cd"
+  },
+  "productName": "Yison E13 Magnetic Bluetooth Earphone",
+  "brandName": "Yison",
+  "description": "This Yison E13 Earphone is comfortable to use, It is Fit For Workout Gym Exercise, Stylish Lightweight And Sweatproof Perfect For Running, Biking Or Gym Can Be Used As Sports Earphones, But remember that it is not Ideal For Strenuous Sports. It is supports with AVRCPV1.3 / A2DPV1.2 / HFPV1.5 / HSPV1.2. This E13 earphone featured with Frequency Response: 2402MHz - 2480MHz, Sensitivity: -85 dBm, Headphone Driver Units: 14 mm and Microphone. and also it provides Wireless Range: 8 m, Battery Capacity: 65 mAh, Play Time: 3 hr and Standby Time: 6 hr. In this Earphone, Bluetooth 5.0 technology Ensures perfect stereo sound with High Bass, Active Noise Reduction Technology. This new Yison E13 Magnetic Bluetooth Earphone has no warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720335686/vt6ucew4wwuk67m6ueua.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720335688/pvrossbe8vbpnhzvywm4.jpg"
+  ],
+  "category": "earphones",
+  "price": 650,
+  "createdAt": {
+    "$date": "2024-07-07T07:01:46.954Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T07:01:46.954Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a3db3d1db2255e83151d0"
+  },
+  "productName": "Benco V82 Smartphone (3/64GB)",
+  "brandName": "Benco ",
+  "description": "The Benco V82 Smartphone has a sleek look and an excellent list of features. It guarantees a seamless user experience because it is powered by the Android 11 operating system. With a strong 5000mAh Li-poly battery, customers may use the device for longer periods without worrying about needing to recharge it frequently. With a resolution of 1600 x 720 HD +, the brilliant 6.517-inch water display of the Benco V82 offers clear and sharp images. Storage for apps, media, and files is plenty with 3GB RAM and 64GB ROM, which can be expanded with an extra 3GB virtual RAM. With its 1.6GHz Octa-core SC9863 CPU and IMEG8322 GPU, it provides effective multitasking and gaming performance. The 8MP AI dual rear camera with f/2.0 aperture and AI portrait mode guarantees high-quality images with depth and clarity, while the 8MP AI front camera with f/2.0 aperture and AI portrait mode allows you to take beautiful selfies. A rear flash makes for better low-light shooting. With its Nano SIM+Nano SIM+Micro SD card slot, the Benco V82 offers a variety of connectivity possibilities. Smooth internet connectivity is ensured with Wi-Fi 802.11 b/g/n and support for 2G, 3G, and 4G networks. For increased security and convenience, the Benco V82 also has many sensors installed, including a fingerprint, light, proximity, and G-sensor. GPS+GLONASS technology powers navigation and location services, enabling precise positioning.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720335775/ybe5z4kzs0lyeynwqsdv.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720335779/ri2garjoy1zrtxjzv2th.webp"
+  ],
+  "category": "mobiles",
+  "price": 7899,
+  "createdAt": {
+    "$date": "2024-07-07T07:03:15.749Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T07:03:15.749Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a3df9d1db2255e83151d3"
+  },
+  "productName": "Tecno Pop 7 Smartphone (2/64GB)",
+  "brandName": "Tecno",
+  "description": "he Tecno Pop 7 is a budget-friendly smartphone that runs Android v12 with the HiOS user interface and is powered by the Unisoc SC9863A1 chipset, which features an octa-core CPU with two clusters of Cortex A55 cores clocked at 1.6 GHz. The 64-bit architecture and 28 nm fabrication technique provide adequate performance for daily tasks, which is supplemented with the PowerVR GE8322 GPU for minimal graphical requirements. The Pop 7 features a 6.6-inch IPS LCD and an HD+ resolution of 720 x 1612 pixels, for a pixel density of 267 ppi. The screen-to-body ratio is 85.04%, thanks to a bezel-less design and a waterdrop notch for the front camera. The display supports multitouch and refreshes at 60 Hz. The Tecno Pop 7 includes two rear cameras: an 8 MP wide-angle primary sensor and a 0.08 MP secondary sensor. This setup includes digital zoom, auto flash, face detection, touch-to-focus, and shooting modes like continuous shooting and HDR. The back camera can snap photos with a 3264 x 2448 pixels resolution and record 1080p movies at 30 frames per second. The front-facing camera is a 5 MP sensor with dual LED light, and it can shoot 1080p videos at 30 fps, making it ideal for selfies and video calls. The Tecno Pop 7 has a powerful 5000 mAh Li-Polymer battery for extended use and supports 10W quick charging for faster power replenishment.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720335851/pkojryf1tra8cpwozyuq.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720335855/hvjmtyecapwcloiqriat.webp"
+  ],
+  "category": "mobiles",
+  "price": 8640,
+  "createdAt": {
+    "$date": "2024-07-07T07:04:25.907Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T07:04:25.907Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a3e36d1db2255e83151d6"
+  },
+  "productName": "OPPO A17k Smartphone (3/64GB)",
+  "brandName": "OPPO ",
+  "description": "The Oppo A17k has a 6.56-inch HD+ display. Its waterdrop notch has a Full-View design. The back camera has two 8 Megapixel sensors, an LED flash, autofocus, panoramic, and the ability to capture Full HD video. A 5 Megapixel front camera is available. The 5000 mAh battery on the Oppo A17k supports 10W quick charging. It has an octa-core CPU that runs at up to 2.3 GHz, 3 GB of RAM, and a PowerVR GE8320 GPU. A MediaTek Helio G35 (12nm) chipset powers it. The gadget has a MicroSD slot and 64 GB of internal storage. This phone has a side-mounted fingerprint sensor.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720335906/qfewjihkaw32jm13mnpr.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720335912/jogpoex3lgj1mydtaihh.webp"
+  ],
+  "category": "mobiles",
+  "price": 11990,
+  "createdAt": {
+    "$date": "2024-07-07T07:05:26.628Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T07:05:26.628Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a3e73d1db2255e83151d9"
+  },
+  "productName": "Infinix Hot 30 Smartphone (4/128GB)",
+  "brandName": "Infinix",
+  "description": "The Infinix Hot 30 has a 6.78-inch Full HD+ IPS LCD screen. It has a front camera with a punch-hole in the center. The rear camera has a dual 50 Megapixel + unspecified secondary camera with PDAF, f/1.6 aperture, quad-LED flash, HDR, and other features, as well as Quad HD video recording. The front-facing camera has an 8-megapixel resolution. The Infinix Hot 30 has a 5000 mAh battery and 33W fast charging. It has 4 GB of RAM, an octa-core CPU running at up to 2.0 GHz, and a Mali-G52 MC2 GPU. It runs on a MediaTek Helio G88 (12 nm) chipset. The device has 128 GB of internal storage as well as a dedicated MicroSD slot. This phone has a fingerprint sensor on the side.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720335971/utrxyw3qydfsqjztiocd.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720335974/b3ywmz35k7n7hd2vhbvo.webp"
+  ],
+  "category": "mobiles",
+  "price": 13999,
+  "createdAt": {
+    "$date": "2024-07-07T07:06:27.723Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T07:06:27.723Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a411cd1db2255e83151e5"
+  },
+  "productName": "Samsung Galaxy A05 Smartphone (6/128GB)",
+  "brandName": "Samsung ",
+  "description": "The Samsung Galaxy A05, with its powerful octa-core processor, 6GB of RAM, and 128GB of internal storage, delivers impressive performance for the task at hand. The Galaxy A05 learns how you use your phone and uses that information to provide you with up to 6GB of extra virtual RAM, allowing you to multitask and run apps smoothly. The Samsung Galaxy A05 features a 6.7-inch HD+ PLS LCD with clear visuals and a large viewing area. The camera combination consists of an impressive dual 50MP main camera + 2MP depth camera back arrangement for detailed and flexible shooting, as well as an 8MP front camera for great selfies. The Galaxy A05's durable Li-Po 5000mAh battery ensures long-lasting use, and 25W rapid charging makes charging quick and simple. Wireless connectivity is made possible by several technologies, including Bluetooth 5.3, dual-band, Wi-Fi Direct, and Wi-Fi 802.11 a/b/g/n/ac. GPS, GLONASS, GALILEO, and BDS compatibility allow the device to provide precise location. Data transfers are facilitated by the USB Type-C 2.0 connection. The Samsung Galaxy A05 is a sleek-looking smartphone with a glass front, plastic back, and frame. It comes in single SIM (Nano-SIM) and dual SIM (Nano-SIM, dual stand-by) versions. Its 195 g weight and 168.8 x 78.2 x 8.8 mm dimensions make it a well-proportioned device that ensures a satisfying use.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720336647/oy9uzoeoeb6zsqplcz1l.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720336651/sgo5c5oaukwrljg1aayw.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720336654/l46zhipt22idup1crywj.webp"
+  ],
+  "category": "mobiles",
+  "price": 22499,
+  "createdAt": {
+    "$date": "2024-07-07T07:17:48.136Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T07:17:48.136Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a418ad1db2255e83151e8"
+  },
+  "productName": "Fantech T533 Wired Premium Office Mouse",
+  "brandName": "Fantech",
+  "description": "The Fantech T533 is an ideal Office mouse. The main feature of this model is its nice design and response 10G Acceleration. Thanks to the Premium Grade Sensor equipped with 1200 DPI. It supports up to 3 million clicks lifetime switches which are made for extra durability even for extreme using conditions while ensuring they stay quick and hyper-responsive. It has 3 buttons. It features a soft scroll. The sliding of the mouse on the smooth surface is almost perfect. The Fantech T533 comes with a 1-year warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720336719/dmjv4gjekp5uppfculil.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720336723/ngeqgyezntjrvivdzphw.jpg"
+  ],
+  "category": "Mouse",
+  "price": 299,
+  "createdAt": {
+    "$date": "2024-07-07T07:19:38.891Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T07:19:38.891Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a41ccd1db2255e83151eb"
+  },
+  "productName": "Rapoo N100 Wired Optical Mouse",
+  "brandName": "Rapoo",
+  "description": "No driver required, just plug it in and go. Life can be that easy. Youâ€™ll enjoy responsive and smooth cursor control with the 1600 DPI high-definition optical tracking engine. Scroll up and down function greatly facilitates your daily work or web browsing. The anti-slip pattern on the scroll wheel ensures fast, easy and accurate scrolling. Designed to suit either hand. With the full-size shape, you are not easy to get tired even for hours' operation.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720336819/lyrh7pznkwwxvvugyae3.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720336824/fvho5i6v1ekgmjpsf78s.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720336828/iroycucyxcse66kj4c2q.jpg"
+  ],
+  "category": "Mouse",
+  "price": 330,
+  "createdAt": {
+    "$date": "2024-07-07T07:20:44.613Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T07:20:44.613Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a4216d1db2255e83151ee"
+  },
+  "productName": "Havit MS72 Cool RGB LED USB Gaming Mouse Black",
+  "brandName": "Havit ",
+  "description": "The Havit MS72 Cool Mouse is an entry-level RBG Gaming Mouse that has DPI controlling facility. This mouse has up to 1200DPI calibration and has 4 operation keys. These keys have a key life of 3,000,000 clicks. The mouse operates with 5.0 Volt and has a cable length of 1.3M.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720336894/zlca3kgttcupay7jvl3t.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720336900/csdplwqu5yu32ieojeoa.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720336904/a99aq0mgbsfsxez5tueg.jpg"
+  ],
+  "category": "Mouse",
+  "price": 370,
+  "createdAt": {
+    "$date": "2024-07-07T07:21:58.124Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T07:21:58.124Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a427bd1db2255e83151f1"
+  },
+  "productName": "SEWOO SLK-TS100 Direct Thermal POS Printer",
+  "brandName": "SEWOO ",
+  "description": "SEWOO SLK-TS100 Direct Thermal POS Printer is an excellent example of a mobile Portable Thermal line POS Printer. This label printer is capable of printing various types of POS documents at a lightning-fast rate. It has an elegant, compact, and wall-mountable structure design which makes Fast, reliable, and versatile thermal receipt printing an easy task. This POS printer is a good fit to be used in retail, catering, hospital, bank, etc. This POS printer has a triple connection interface with a simple installation kit. The Print Speed is 220mm/sec with a Print Head Life count of 100 Kilometer. The Print Font supported in ASCII Mode are Font A(12Ã—24), Font B(9Ã—17). The Print Font for Graphic supported is 24 X 24 dots ( Chinese ). The maximum Print Resolution is 203 dpi. As for the Print Font Character Support, it has an International Font line reading of Font A(12Ã—24) : 48cpl or 42cpl with Font B(9Ã—17) : 64cpl, Chinese/Korean/Japanese: 24cpl. This POS printer features an effective Print width of 2.83 inches (72mm, adjustable by commands). The maximum supported paper Width is 79.5Â±0.5mm. when the supported Paper Roll Diameter is 3.1 inches (Ã¸ 80mm) The supported paper thickness of 0.06~0.08mm. It supports Windows with ESC/POS Print Command compatibility. And the cutter life cycle count for the auto-cutter is 1.5 Million cuts. The MCBF count is 80,000H. it supports USB, Serial ATA, and Ethernet as a connectivity interface. The Cash Drawer is 1circuit (24V,1A With a Max Power input of AC: 110~220Vac 50/60Hz, DC: 24Vdc  with 2.5A current. the color is Black. It has compliance with CE, FCC, KC. The Operating Temperature is 32 ~ 113â„‰(0 ~ 45â„ƒ) and the Operating Humidity is 10 ~ 80RH%. The Storage Temperature is 14 ~ 140â„‰(-10 ~ 60â„ƒ). The dimensions of this printer are 142 x 185 x 136 mm. The weight is around 1.02 Kg. SEWOO SLK-TS100 Direct Thermal POS Printer offers 01 years of manufacturer warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720337005/sw1pckf5mqfuxo5fdvr0.jpg"
+  ],
+  "category": "printers",
+  "price": 12000,
+  "createdAt": {
+    "$date": "2024-07-07T07:23:39.995Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T07:23:39.995Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a42d2d1db2255e83151f4"
+  },
+  "productName": "HP LaserJet MFP M438nda Multifunction Laser Printer",
+  "brandName": "HP ",
+  "description": "Surpass your office printer expectations with the speed, quality, and efficiency of HP LaserJet office printers. Simplify workflows with automatic paper-handling solutions, efficient scan solutions, and copying. Conserve resources with automatic two-sided printing and copyingâ€”consume up to 50% less paper. Capture both sides of the page with ease, using the 100-sheet reversing automatic document feeder. Launch tasks at the deviceâ€”streamline copying; capture a two-sided ID; and darken, enlarge, or reduce images. Bring together remote monitoring and shared resources to help optimize your print environment. Identify new devices and gain insight into printing with HP Web Jetadmin remote discovery and monitoring. Easily set up, print, and share printing resources with built-in Ethernet networking. Help maximize value and minimize budget impact with an attractive purchase price and affordable running costs. Help save budget and put affordable MFP performance to work for your business. Help protect your investment and get affordable running costs, using Original HP toner cartridges.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720337082/tmpqadnphib30qvnbus7.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720337087/xgspchffsp6syjhzrx8z.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720337090/rm8lgizbhq3ydqh2cxek.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720337094/qoab7jozvsoe0cwalbvr.jpg"
+  ],
+  "category": "printers",
+  "price": 109000,
+  "createdAt": {
+    "$date": "2024-07-07T07:25:06.909Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T07:25:06.909Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a4354d1db2255e83151f7"
+  },
+  "productName": "AMD Ryzen 5 5500 Processor",
+  "brandName": "AMD ",
+  "description": "AMD Ryzen 5 5500 Processor is 6 processor cores, 12 threads, and an astonishingly efficient 45-65W TDP. This processor, It stands with 3.9GHz Base Clock, 4.4GHz Max Boost Clock, 3MB L2 Cache, 16MB L3 Cache with AM4 Package, and TSMC 7nm FinFET CMOS. This processor is built with PCIe 3.0 x8 and Wraith Spire Thermal Solution. The AMD Ryzen 5 5500 Processor provides DDR4 Up to 3200MHz memory with 2 memory channels. It has AMD StoreMI Technology. A fast and easy way to expand and accelerate the storage in a desktop PC with an AMD Ryzen processor. AMD StoreMI technology is a powerful tool for PC enthusiasts that want to improve load times, boot times, file management, or system responsiveness. Whatever your storage acceleration needs, AMD StoreMI technology automatically pairs your most-used files with an SSD cache for peak performance.  MD StoreMI technology can get files running at SSD-like speeds. Simply add an SSD to your system and let StoreMI do the rest. It also has AMD \"Zen 3\" Core Architecture with the fastest cores in the world for PC gamers. The \"Zen 3\" architecture represents the most comprehensive design overhaul of the \"Zen\" era. Over 20 major changes include wider and more flexible execution resources; significantly more load/store bandwidth to feed execution; and a streamlined front-end to get more threads in flight and do it faster. The \"Zen 3\" architecture can extract an average of 19% additional performance from every MHz of frequency relative to the previous generation2. This is a historically large generational improvement in IPC, and a major player in the architectureâ€™s ability to deliver unmatched single-core performance. The \"Zen 3\" architecture transitions to a new \"unified complex\" design that brings 8 cores and 32MB of L3 cache into a single group of resources. This dramatically reduces core-to-core and core-to-cache latencies by making every element of the die a next-door neighbor with minimal communication time. Latency-sensitive tasks like PC gaming especially benefit from this change, as tasks now have direct access to twice as much L3 cache versus the Zen 2. It also features the AMD Ryzen VR-Ready Premium for the best possible VR experiences, AMD offers select Ryzenâ„¢ VR-Ready Premium processors. AMD Ryzen 5 5500 Processor offers a 3-years warranty(No Warranty for Fan or Cooler).",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720337222/x36m9mrz2ycit8gsrm4q.jpg"
+  ],
+  "category": "processor",
+  "price": 10500,
+  "createdAt": {
+    "$date": "2024-07-07T07:27:16.038Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T07:27:16.038Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a4381d1db2255e83151fa"
+  },
+  "productName": "Intel 10th Gen Core i5-10400F Processor",
+  "brandName": "Intel ",
+  "description": "This i5-10400F Processor is the new 10th gen Comet Lake microarchitecture that is manufactured with the 14nm process that comes with six cores but lacks in HyperThreading. As this chip is updated to the latest BIOS revision, it nicely fits into any Intel 400-series motherboard. Focusing on this, all the major motherboard manufacturers have already started BIOS updates for their 400-series lineup. These Processors also support 64-bit computing on Intel architecture require an Intel 64 architecture-enabled BIOS.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720337264/v7cex5nwhpcoxuqnrpd7.jpg"
+  ],
+  "category": "processor",
+  "price": 11500,
+  "createdAt": {
+    "$date": "2024-07-07T07:28:01.668Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T07:28:01.668Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a443ad1db2255e83151fd"
+  },
+  "productName": "AMD Ryzen 5 8600G with Radeon Graphics",
+  "brandName": "AMD ",
+  "description": "The AMD Ryzen 5 8600G 4.3 GHz Six-Core AM5 Processor raises the bar for gaming and content production with six cores, 12 threads, and a dedicated AI engine. This Ryzen CPU, designed for socket AM5 motherboards and based on the powerful Zen 4 architecture with the 4nm technology, outperforms its predecessor while remaining very energy efficient. The Ryzen 5 8600G is designed to provide the power required to seamlessly load and multitask demanding programs, with a base clock speed of 4.3 GHz and a maximum boost clock speed of 5 GHz, as well as 16MB of L3 cache. Furthermore, the AMD Ryzen AI engine utilizes the processor's specialized NPU, GPU, and processing cores to boost AI tasks with compatible apps. This unlocked CPU may be overclocked to increase performance even more. Other characteristics include compatibility with PCIe Gen 4 technology, which allows high-bandwidth graphics cards and storage devices. The Ryzen 5 8600G also supports up to 256GB of 5200 MHz DDR5 ECC memory on compatible motherboards, which may be overclocked using AMD EXPO profiles for improved gaming performance. This CPU has a TDP of 65W (Thermal Design Power) with a Wraith Stealth cooling. It also has integrated Radeon 760M graphics.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720337452/reaomjwtscp2kg8ec9yq.webp"
+  ],
+  "category": "processor",
+  "price": 27500,
+  "createdAt": {
+    "$date": "2024-07-07T07:31:06.046Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T07:34:14.180Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a44bcd1db2255e8315200"
+  },
+  "productName": "Whirlpool Fresh Magic Pro 257L Glow Refrigerator",
+  "brandName": "Whirlpool ",
+  "description": "Whirlpool Fresh Magic Pro 257L Glow Refrigerator is available at Best Electronics in Bangladesh. Best Electronics is the Authorized Distributor of Whirlpool in Bangladesh. Get yours now from Best Electronics and enjoy our own Super Kisti or Quick EMI payment facilities.\n\nUp to 30 days of Chicken and Fish Preservation when stored in the freezer for optimum freshness\nUp to 15 hours of Milk Preservation during Power Cuts\nCyclopentene [Eco-friendly (100% CFC & HCFC Free) Green Technology]\nMicroblock Technology\nActive Deo Technology",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720337573/m6q9omsk3ywmogjssfkg.jpg"
+  ],
+  "category": "refrigerator",
+  "price": 44590,
+  "createdAt": {
+    "$date": "2024-07-07T07:33:16.429Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T07:33:35.515Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668a453ad1db2255e8315207"
+  },
+  "productName": "Conion BEW-600GD (Brown) Inverter Refrigerator",
+  "brandName": "Conion",
+  "description": "Best Electronics is the Sole Authorized Distributor of Conion in Bangladesh. Get your Conion BEW-600GD (Brown) Inverter Refrigerator from your nearest Best Electronics store and enjoy Easy Instalment Payment Facilities and 10 Years Compressor Warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720337702/g4ijcb22a3wcpxhtmuzs.jpg"
+  ],
+  "category": "refrigerator",
+  "price": 104100,
+  "createdAt": {
+    "$date": "2024-07-07T07:35:22.163Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T07:35:22.163Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668e3a8ef0d132d649431dfb"
+  },
+  "productName": "Apple AirPods with Wireless MagSafe Charging Case ",
+  "brandName": "Apple ",
+  "description": "Brand - Apple, Model - Apple AirPods with Wireless MagSafe Charging Case (3rd Gen), Type - Earbuds, Connectivity - Wireless, Microphone - Yes, Working/Bluetooth Range - 10 Meter, Bluetooth Version - Bluetooth 5.0, Noise Cancellation - No, Sound Mode - Stereo, Waterproof - Yes, Waterproof Grade - IPX4, Dustproof - No, Rechargeable Battery - Yes, Charging Time - 5 Minutes for 1 Hour, Playing Time - Up to 6 hours, Charging Plug Type - USB Type-C, Weight (gm) - 4.3gm (AirPods Each), 37.9gm (Charging Case), Color - White, Feature - With spatial audio that places sound all around you, Adaptive EQ that tunes music to your ears, and longer battery life that charges up in a snap. It shrugs off sweat and sprinkles, and delivers an experience thats simply  magical. Bass hits an all-time high., Others - Wireless Chipset: Apple H1, Earpiece Design: In-Ear (Intra-Aural), Full Remote OS Support: iOS, Charging Port: Pins, Charging Case: Additional Runtime: 24 Hours (Bluetooth), Charging Interface: USB Type-C, Qi. Sensors: Dual beamforming microphones, Inward-facing microphone, Skin-detect sensor, Motion-detecting accelerometer, Speech-detecting accelerometer, Force sensor., Specialty - Sweat and water resistant (IPX4). With spatial audio that places sound all around you., Part No - MME73AM/A, Warranty - 1 Year",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720597106/xv8rinjubwnvjqfa2et9.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720597109/houjkqldkblrpnaa9znr.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720597116/yk2dbo0urt7khq1fd4q0.webp"
+  ],
+  "category": "airpodes",
+  "price": 43000,
+  "createdAt": {
+    "$date": "2024-07-10T07:38:54.157Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-10T07:38:54.157Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668e3b10f0d132d649431e09"
+  },
+  "productName": "Havit TW929 Black TWS Bluetooth Stereo Gaming Earbuds",
+  "brandName": "Havit ",
+  "description": "The price of Havit TW929 Ear Phone starts from 2,200 . The price may vary due to your customization and product availability. You can buy Havit TW929 Ear Phone from our website or visit our showrooms nearby.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720597205/kxkigwupjr0wfxpu83ut.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720597209/sep866vlwni7yewz0ods.webp"
+  ],
+  "category": "airpodes",
+  "price": 2200,
+  "createdAt": {
+    "$date": "2024-07-10T07:41:04.533Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-10T07:41:04.533Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668e3b6af0d132d649431e17"
+  },
+  "productName": "Hifuture FlyBuds3 Black True Wireless Bluetooth Earbuds",
+  "brandName": "Hifuture",
+  "description": "\nOwn The Subjects Voice We cant stop background noises, so FlyBuds3 has got an in-built Environmental Noise Cancelling feature that lets you experience pure bliss that perfectly fits you, FlyBuds3 appears as an ultra-lightweight. No matter if you wear it for hours, it wont feel edgy on your best music playlist, Control music and answer calls with just one smart touch tap. FlyBuds3 smart touch sensor makes your life untied from all needless activities.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720597332/i3hah8pn11thzrwzewyh.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720597337/bmi2qyckzqtfv005qg81.webp"
+  ],
+  "category": "airpodes",
+  "price": 2300,
+  "createdAt": {
+    "$date": "2024-07-10T07:42:34.509Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-10T07:42:34.509Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6690f834f2aa6c0075b6ba1b"
+  },
+  "productName": "Havit GE02 Wired Black-Red Gaming Earphone with Mic",
+  "brandName": "Havit ",
+  "description": "Brand - Havit, Model - Havit GE02, Type - Earphone, Connectivity - Wired, Frequency Response - 20-20000Hz, Sensitivity - 120dB, Microphone - Yes, Sound Mode - Stereo, Waterproof - No, Dustproof - No, Shockproof - No, Rechargeable Battery - No, Charging Plug Type - No, Plug Type - 3.5mm, Cord/Cable Length - 4.26 Ft, Color - Black-Red, Others - Plug diameter: 3.5mm, Plug Type: L-bend, Principle of vocalization: Dynamic circle, Impedance: 16ohm, Earbuds/ear cover material: metal-plated plug, Specialty - Pluggable pole microphones + wire-controlled microphone., Warranty - 1 Year, Country of Origin - China, Made in/ Assemble - China",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720776725/wwktohrsopikomun52mk.webp"
+  ],
+  "category": "earphones",
+  "price": 850,
+  "createdAt": {
+    "$date": "2024-07-12T09:32:36.485Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-12T09:32:36.485Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6690f880f2aa6c0075b6ba1e"
+  },
+  "productName": "Hoco ES64 Ultra Gray Neckband Bluetooth Earphone",
+  "brandName": "Hoco",
+  "description": "Brand - Hoco, Model - Hoco ES64 Ultra, Type - Neckband, Connectivity - Wireless, Frequency Response - 20Hz - 20KHz, Impedance (ohm) - 320 + 15%, Microphone - Yes, Working/Bluetooth Range - 10 Meter, Bluetooth Version - Bluetooth 5.3, Noise Cancellation - No, Sound Mode - Stereo, Waterproof - No, Dustproof - No, Shockproof - No, Driver Unit - 10mm, Battery - 200mAh, Rechargeable Battery - Yes, Charging Time - 2 Hours, Playing Time - Up to 50 Hours, Operating Range - 10 Meter, Charging Plug Type - USB Type-C, Plug Type - No, Cord/Cable Length - Not Applicable, Weight (gm) - 26.5 gm, Color - Gray, Feature - Lightweight and flexible neckband design for comfortable wear during sports activities, Ergonomically designed earbuds for a secure fit and noise isolation, Others - Support prompt tone in Chinese and English: double click the multifunction key when not paired,Size: the total length of the earphones is 85cm, Standby time: 350 hours, Specialty - Say goodbye to the hassle of tangled wires! With the latest Wireless 5.3 technology, the Hoco ES64 Ultra Sports Bluetooth Wireless Neckband Earphone ensures seamless connectivity to your device without any cords holding you back. Enjoy the freedom to move around up to 10 meters away from your device, giving you the flexibility to multitask or exercise without limitations with this neckband earphones., Warranty - 3 Month (Warranty must be claimed with original box &amp; all accessories), Country of Origin - China",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720776811/c3kgn810vvvjxgso1die.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720776817/td01kkxebtxdufzqwlsj.webp"
+  ],
+  "category": "earphones",
+  "price": 890,
+  "createdAt": {
+    "$date": "2024-07-12T09:33:52.233Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-12T09:33:52.233Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6690f92bf2aa6c0075b6ba33"
+  },
+  "productName": "iPhone 14 128GB Purple (Singapore)",
+  "brandName": "iPhone ",
+  "description": "The iPhone 14 is the latest model of the iPhone series, featuring the latest technology and advanced features that are designed to provide users with a seamless and unparalleled mobile experience. The device is powered by the latest A15 Bionic chip, providing exceptional performance and power efficiency. The 6.1-inch Super Retina XDR display, with ProMotion technology, delivers an immersive visual experience with incredibly vibrant colors and deep blacks. The device comes equipped with a dual-camera system, including a 12MP main and a 12MP ultra-wide, allowing users to capture stunning photos and videos. This iPhone 14 has a 128GB internal storage capacity, offering ample space for all your photos, videos, and apps. It has been designed for durability with Ceramic Shield. It also offers water resistance and a surgical-grade stainless steel body. The Purple color option adds a luxurious and elegant touch to the device's overall design.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720776981/dxwzxdvytsp7htrp2av6.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720776985/j23szdzkiavuflhv6nli.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720776989/fy4vwbqaxziafmi7mzfq.webp"
+  ],
+  "category": "mobiles",
+  "price": 117000,
+  "createdAt": {
+    "$date": "2024-07-12T09:36:43.752Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-12T09:36:43.752Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6690f98cf2aa6c0075b6ba36"
+  },
+  "productName": "Samsung Galaxy Z Fold4 Smartphone (12/256GB)",
+  "brandName": "Samsung ",
+  "description": "The Samsung Galaxy Z Fold4 has a 7.6-inch (unfolded) Full HD+, premium Dynamic AMOLED 2X display. It has a smartphone that can fold up. A 4K video recording option is available on the triple 50+10+12 MP back camera. The 4 MP front camera has an additional 10 MP cover display camera. 4400 mAh battery is included with the Galaxy Z Fold4. It has an octa-core CPU that runs at up to 3.19 GHz, 12 GB of RAM, and an Adreno 730 GPU. A Qualcomm Snapdragon 8+ Gen 1 (4 nm) chipset provides the device's power. There is no MicroSD slot and the storage options are 256, 512, or 1 TB. This phone has a fingerprint sensor mounted on the side.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720777070/f5szbjgydjqle6zqmjhw.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720777077/ydaavmdppqwwhqu7cbqn.png",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720777086/sk7cpf1hgqzenbqoehyt.png"
+  ],
+  "category": "mobiles",
+  "price": 120000,
+  "createdAt": {
+    "$date": "2024-07-12T09:38:20.057Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-12T09:38:20.057Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6691034af2aa6c0075b6ba4b"
+  },
+  "productName": "iMICE A7 Wired USB Gaming Mouse",
+  "brandName": "iMICE ",
+  "description": "The iMICE A7 Wired USB Gaming Mouse comes with an ergonomic design, you can use it long-term without any fatigue. This mouse has side lighting and breathing light of 4 color variations to make your desktop illuminated. The iMICE A7 Wired USB Gaming Mouse is suitable for high-end players & gaming professional players. This mouse comes with 7 customizable function buttons that give you more powerful features. In addition to the default button function, this mouse has four key function modules, each module has its own dropdown menu that can be customized to meet the different needs. The iMICE A7 Wired USB Gaming Mouse is compatible with Windows XP/Vista/Win7/8/10 Mac OS X. The iMICE A7 mouse comes with a 01-year warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720779584/qf8n9vwjulveowtunlns.jpg"
+  ],
+  "category": "Mouse",
+  "price": 650,
+  "createdAt": {
+    "$date": "2024-07-12T10:19:54.370Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-12T10:19:54.370Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "669103a2f2aa6c0075b6ba4e"
+  },
+  "productName": "Fantech WG10 Raigor II Wirless Gaming Mouse",
+  "brandName": "Fantech",
+  "description": "Fantech WG10 Raigor II is an ideal gaming mouse. The main feature of this model is its nice design and high response. It is a wireless mouse that uses a nano receiver with 2.4Ghz speed. It uses a single AA battery for its power supply. It has a power saving sensor for Pixart which provides you with performance but with low power consumption rate. It also has On The Fly DPI adjustment setting. This mouse can be used with laptops or desktops. But sliding the mouse on the playing surface is almost perfect.\n\nThis exclusive X9 Gaming mouse comes with 12 months of warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720779663/dxu5fhe9coiaogkwpfot.webp",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720779668/hgdnrforbiiadds5gzrd.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720779677/asst7k3klo9dfktxboqp.jpg"
+  ],
+  "category": "Mouse",
+  "price": 675,
+  "createdAt": {
+    "$date": "2024-07-12T10:21:22.233Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-12T10:21:22.233Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "669103faf2aa6c0075b6ba63"
+  },
+  "productName": "Fantech G13 Rhasta II Pro Gaming Mouse Black",
+  "brandName": "Fantech",
+  "description": "Fantech G13 Rhasta II Pro Gaming Mouse comes with Additional functions Game optical sensor. This gaming mouse has a maximum resolution of 2400 DPI, a Dedicated button for changing modes DPI â€œon the fly with 3 buttons + 1 scroll wheel/button. It's a scroll wheel built in Silicone & rubber materials. This gaming mouse is featured with 5 million keystrokes cycle buttons durability, 4 buttons, Cable in tissue braid, RGB lights, Low friction legs, and also suitable for right and left-handed users. This new Fantech Gaming mouse is compatible with Microsoft Windows, Mac OS, Linux, Chrome operating system. The Fantech G13 Rhasta II Pro Gaming Mouse has a 01-year warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720779758/jh6hiz2xah85sutyz9zg.jpg"
+  ],
+  "category": "Mouse",
+  "price": 550,
+  "createdAt": {
+    "$date": "2024-07-12T10:22:50.952Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-12T10:22:50.952Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66910461f2aa6c0075b6ba66"
+  },
+  "productName": "iMICE T91 Gamer Customizable Gaming Mouse",
+  "brandName": "iMICE",
+  "description": "iMICE T91 Gamer is Customizable Gaming Mouse. It comes with a Programmable and Fire Button design, One click to Burst. Here Nine Details Create The High Quality. In this gaming mouse, All keys are customizable 1200-2400-4800-7200 DPI, so that it is easy to deal with different needs. This iMICE T91 Gamer Gaming mouse is designed with an Anti-skid texture. Fire button design, Button Functions And Parameters, Colorful luminous effect, and High precision, Full-key macro definition, one-click to finish complex operations features. This iMICE T91 Gamer is one kind of 8D Customizable Gaming Mouse. It also comes with 3D non-slip texture, will not slip even if you perform severe operations, and also Comfortable Streamlined appearance, fits the palm better and relieves fatigue. This iMICE T91 Gamer Mouse featured with Operating Voltage DC 5V+5%, Working current < 100mA, Lighting effect Four-color breathing light and Fire Button Design One-click To Burst, Independent fire button design, especially suitable for shooting games. Professional Game-grade engine to provide more accurate positioning with Multiple Anti-skid. This gaming supports with Windows xp/ Vista/ Win7/ 8/ 10 Mac OS X operating system. The Latest iMICE T91 Gamer gaming mouse offers 01-year warranty.",
+  "productImage": [
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720779857/e3oae5b1eevprvzywbhp.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720779861/equwoxjkkjsmhkebjucn.jpg",
+    "http://res.cloudinary.com/dpsmg39d7/image/upload/v1720779864/wjrnkjhclzbppwhf3876.jpg"
+  ],
+  "category": "Mouse",
+  "price": 850,
+  "createdAt": {
+    "$date": "2024-07-12T10:24:33.913Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-12T10:24:33.913Z"
+  },
+  "__v": 0
+}]

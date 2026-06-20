@@ -1,7 +1,12 @@
 import bodyParser from "body-parser";
 import express from "express";
 import mongoose from "mongoose";
-import { mongodbURL, port } from "./config.js";
+import {
+  corsOrigins,
+  mongodbDatabase,
+  mongodbURL,
+  port,
+} from "./config.js";
 import basicRouter from "./routes/basicRoutess.js";
 import allUserRouter from "./routes/allUser.js";
 import cors from "cors";
@@ -22,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: corsOrigins,
     credentials: true,
   })
 );
@@ -40,13 +45,14 @@ app.use("/make_payment", stripePayment);
 app.use("/sslcommerz", sslcommerzPayment);
 
 mongoose
-  .connect(mongodbURL)
+  .connect(mongodbURL, { dbName: mongodbDatabase })
   .then(function () {
-    console.log("connected with mongoose");
+    console.log(`Connected to MongoDB database: ${mongodbDatabase}`);
     app.listen(port, () => {
       console.log(`Server running on port ${port}`);
     });
   })
   .catch(function (err) {
-    console.log(err);
+    console.error("MongoDB connection failed:", err.message);
+    process.exitCode = 1;
   });
