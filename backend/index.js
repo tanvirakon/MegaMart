@@ -1,5 +1,6 @@
 import bodyParser from "body-parser";
 import express from "express";
+import path from "path";
 import mongoose from "mongoose";
 import {
   corsOrigins,
@@ -43,6 +44,13 @@ app.use("/search", productSearchRouter);
 app.use("/otp", otpVerify);
 app.use("/make_payment", stripePayment);
 app.use("/sslcommerz", sslcommerzPayment);
+
+// --- Serve frontend in production ---
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
+});
 
 mongoose
   .connect(mongodbURL, { dbName: mongodbDatabase })
