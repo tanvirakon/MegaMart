@@ -1,4 +1,4 @@
-import axios from "axios";
+import API from "./api.js";
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -29,7 +29,7 @@ function App() {
 
   const fetchUserData = async () => {
     try {
-      const user = await axios.get("http://localhost:3000/secret", {
+      const user = await API.get("/secret", {
         withCredentials: true,
       });
       if (user?.data) dispatch(setUserDetails(user.data)); //reducer e value set kre dlm
@@ -38,12 +38,11 @@ function App() {
     }
   };
   const fetchProductCountInCart = async () => {
-    const user = await axios.get("http://localhost:3000/secret", {
+    const user = await API.get("/secret", {
       withCredentials: true,
     });
     if (user?.data) {
-      const productCount = await axios.get(
-        `http://localhost:3000/cart/count_product/${user.data._id}`
+      const productCount = await API.get(`/cart/count_product/${user.data._id}`,
       );
       setNoOfProductInCart(productCount?.data?.count);
     }
@@ -60,7 +59,7 @@ function App() {
       <context.Provider
         value={{ fetchUserData, fetchProductCountInCart, noOfProductInCart }}
       >
-        <ToastContainer position="top-center" autoClose={2000} stacked  />
+        <ToastContainer position="top-center" autoClose={2000} stacked />
         <Navbar />
         <div className="flex-grow ">
           <Routes>
@@ -75,7 +74,7 @@ function App() {
               {/* by default AllProducts select hye tkbe */}
               <Route path="all_user" element={<AllUser />} />
             </Route>
-            
+
             {/* seller dashboard */}
             <Route path="/seller_dashboard" element={<SellerDashboard />}>
               <Route index element={<AllProducts />} />

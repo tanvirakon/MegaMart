@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -16,7 +15,7 @@ function Forget() {
 
   const checkEmail = async (e) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:3000/api/checkEmail", {
+    const res = await API.post("/api/checkEmail", {
       email,
     });
     if (res?.data?.error) toast.error("invalid email");
@@ -24,7 +23,7 @@ function Forget() {
       //email correct lets send otp
       setEmail(email);
       setCorrectEmail(true);
-      const response = await axios.post("http://localhost:3000/otp", {
+      const response = await API.post("/otp", {
         email,
       });
       // console.log("fkkkk", response.data.otp); //otp gen hy ..ekn eta ei khane ene check kra lgbe
@@ -47,7 +46,7 @@ function Forget() {
       if (newPass.confirmPass != newPass.pass)
         toast.error("password doesnt match");
       else {
-        const res = await axios.post("http://localhost:3000/api/setNewPass", {
+        const res = await API.post("/api/setNewPass", {
           email,
           password: newPass.pass,
         });

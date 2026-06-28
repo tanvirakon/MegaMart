@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import role from "../helper/role.js";
 import { IoMdClose } from "react-icons/io";
-import axios from "axios";
+import API from "../api.js";
 import { toast } from "react-toastify";
 
 const EditUserRoleModal = ({ user, onclose, userFunc }) => {
@@ -19,8 +19,8 @@ const EditUserRoleModal = ({ user, onclose, userFunc }) => {
       const newRole = {
         userRole: userRole,
       };
-      const findUser = await axios.put(
-        `http://localhost:3000/update_role/${user.email}`,
+      const findUser = await API.put(
+        `/update_role/${user.email}`,
         newRole
       );
       if (findUser.data.data) {

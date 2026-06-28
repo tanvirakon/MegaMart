@@ -1,4 +1,4 @@
-import axios from "axios";
+import API from "../api.js";
 import React, { useEffect, useState } from "react";
 import { MdEdit, MdDelete } from "react-icons/md";
 import { toast } from "react-toastify";
@@ -22,8 +22,7 @@ const AllUser = () => {
   };
 
   const userList = async () => {
-    const res = await axios.get(
-      "http://localhost:3000/all_user"
+    const res = await API.get("/all_user"
       //   , {
       //   withCredentials: "include",
       // }

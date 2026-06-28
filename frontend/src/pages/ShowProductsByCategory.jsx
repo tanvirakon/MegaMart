@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import productCategory from "../helper/productCategory.js";
-import axios from "axios";
+import API from "../api.js";
 import MapOfAllProduct from "../helper/MapOfAllProduct.jsx";
 
 const ProductsByCategory = () => {
@@ -13,8 +13,7 @@ const ProductsByCategory = () => {
   const [data, setData] = useState([]);
   const [checkedProducts, setCheckedProducts] = useState([product]);
   const fetchData = async (product) => {
-    const products = await axios.get(
-      `http://localhost:3000/product/product_by_anyCategories/${product}`
+    const products = await API.get(`/product/product_by_anyCategories/${product}`
     );
     setData(products?.data?.data);
   };

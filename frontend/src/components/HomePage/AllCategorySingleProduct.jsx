@@ -1,15 +1,13 @@
 // spinner lagabo
 import React, { useEffect } from "react";
+import API from "../../../src/api"; // api call r jnno
 import { useState } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
 
 const AllCategorySingleProduct = () => {
   const [productByCategory, setProductByCategory] = useState([]);
   const fetchProductByCategory = async () => {
-    const productResponse = await axios.get(
-      "http://localhost:3000/product/find-all-category"
-    );
+    const productResponse = await API.get("/product/find-all-category");
     setProductByCategory(productResponse.data.data);
     // object chilo...but map object r jnno na...array rklm
   };

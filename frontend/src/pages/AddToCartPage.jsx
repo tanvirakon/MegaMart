@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { TbCurrencyTaka } from "react-icons/tb";
 import { useParams } from "react-router-dom";
@@ -6,6 +5,7 @@ import { MdDelete } from "react-icons/md";
 import { toast } from "react-toastify";
 import context from "../assets/context/context.js";
 import { loadStripe } from "@stripe/stripe-js";
+import API from "../api.js";
 
 const AddToCartPage = () => {
   const { fetchProductCountInCart, noOfProductInCart } = useContext(context);
@@ -20,24 +20,22 @@ const AddToCartPage = () => {
     userId: {},
   });
   const fetchCartDetails = async () => {
-    const user = await axios.get("http://localhost:3000/secret", {
+    const user = await API.get("/secret", {
       withCredentials: true,
     });
     if (!user?.data.error) {
       // suppeded to work only when user is logged in, but doesnt -> will fix in authToken.js
-      const cartDetailsOfUser = await axios.get(
-        `http://localhost:3000/cart/user/${userId}`
-      );
+      const cartDetailsOfUser = await API.get(`/cart/user/${userId}`);
       setCartData(cartDetailsOfUser?.data?.data); //array
       const array = cartDetailsOfUser?.data?.data;
       // didint understand
       const productDetailsPromises = array.map(
         async (item) =>
-          await axios.get(`http://localhost:3000/product/${item.productId}`)
+          await API.get(`/product/${item.productId}`),
       );
       const productDetails = await Promise.all(productDetailsPromises);
       let productDetailsData = productDetails.map(
-        (details) => details.data.data
+        (details) => details.data.data,
       );
       setAllProductDetailsInCart(productDetailsData);
 
@@ -76,9 +74,9 @@ const AddToCartPage = () => {
   const quantityUpdate = async (productId, productQuantity) => {
     productQuantity = productQuantity < 1 ? 1 : productQuantity;
     setProductQuantity(productQuantity);
-    const updated = await axios.patch(
-      `http://localhost:3000/cart/update_quantity/${productId}`,
-      { productQuantity: productQuantity }
+    const updated = await API.patch(
+      `/cart/update_quantity/${productId}`,
+      { productQuantity: productQuantity },
     );
   };
 
@@ -89,8 +87,8 @@ const AddToCartPage = () => {
   const dltProductFromCart = async (productId, userId) => {
     setUndoButtonShow(true);
     setLastDeleteItem({ productId: productId, userId: userId });
-    const dlt = await axios.delete(
-      `http://localhost:3000/cart/dltProduct/${productId}/${userId}`
+    const dlt = await API.delete(
+      `/cart/dltProduct/${productId}/${userId}`,
     );
     if (dlt.data.success) {
       fetchProductCountInCart();
@@ -104,16 +102,15 @@ const AddToCartPage = () => {
 
   const stripePayment = async () => {
     var stripe = await loadStripe(
-      "pk_test_51Q7qyjJUIzyu88OyCieVJNg6oKUcZNUAYut80ie2V1JFxYUXesks8jT5U4rB9bPkmtLl4difztyTvm2hRsnKyMhK005xahzYPk"
+      "pk_test_51Q7qyjJUIzyu88OyCieVJNg6oKUcZNUAYut80ie2V1JFxYUXesks8jT5U4rB9bPkmtLl4difztyTvm2hRsnKyMhK005xahzYPk",
     );
     const payload = {
       products: allProductDetailsInCart,
       productsWithQuantity: cartData,
       totalPrice,
     };
-    const response = await axios.post(
-      `http://localhost:3000/make_payment`,
-      payload
+    const response = await API.get(`/make_payment`,
+      payload,
     );
     const { id: sessionId } = response.data;
     const result = stripe.redirectToCheckout({
@@ -129,18 +126,14 @@ const AddToCartPage = () => {
       productsWithQuantity: cartData,
       totalPrice,
     };
-    const kk = await axios.post(
-      "http://localhost:3000/sslcommerz/init",
-      payload
-    );
+    const kk = await API.post("/sslcommerz/init", payload);
     window.location.replace(kk.data.url);
   };
   const undoDeleteFunc = async () => {
     const lastProductId = lastDeleteItem.productId;
     const userId = lastDeleteItem.userId;
-    const undo = await axios.post(
-      `http://localhost:3000/cart/add_to_cart/${lastProductId}`,
-      { userId }
+    const undo = await API.post(`/cart/add_to_cart/${lastProductId}`,
+      { userId },
     );
     if (undo.data.success) {
       fetchProductCountInCart();
@@ -202,7 +195,7 @@ const AddToCartPage = () => {
                         onClick={() =>
                           quantityUpdate(
                             cartData[j]?.productId,
-                            --cartData[j].productQuantity
+                            --cartData[j].productQuantity,
                           )
                         }
                       >
@@ -214,7 +207,7 @@ const AddToCartPage = () => {
                         onClick={() =>
                           quantityUpdate(
                             cartData[j]?.productId,
-                            ++cartData[j].productQuantity
+                            ++cartData[j].productQuantity,
                           )
                         }
                       >
@@ -227,7 +220,7 @@ const AddToCartPage = () => {
                         onClick={() =>
                           dltProductFromCart(
                             cartData[j]?.productId,
-                            cartData[j]?.userId
+                            cartData[j]?.userId,
                           )
                         }
                       />
@@ -235,7 +228,7 @@ const AddToCartPage = () => {
                         <TbCurrencyTaka />
                         {netCostOfProduct(
                           cartData[j]?.productQuantity,
-                          i?.sellingPrice || i?.price
+                          i?.sellingPrice || i?.price,
                         )}
                       </p>
                     </div>

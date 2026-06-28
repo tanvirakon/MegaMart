@@ -1,4 +1,4 @@
-import axios from "axios";
+import API from "../api.js";
 import { useDispatch } from "react-redux";
 import { setUserDetails } from "../store/userSlice";
 import { toast } from "react-toastify";
@@ -7,7 +7,8 @@ const LogoutButton = () => {
   const dispatch = useDispatch();
   const handleLogout = async () => {
     try {
-      const clearCookie = await axios.get("http://localhost:3000/api/logout", { //cookie clear
+      const clearCookie = await API.get("/api/logout", {
+        //cookie clear
         withCredentials: "include",
       });
       toast.success(clearCookie.data.message);

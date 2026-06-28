@@ -1,4 +1,4 @@
-import axios from "axios";
+import API from "../api.js";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { TbCurrencyTaka } from "react-icons/tb";
@@ -17,8 +17,7 @@ const ProductDetails = () => {
   const { id } = useParams();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const fetchData = async () => {
-    const ProductDetails = await axios.get(
-      `http://localhost:3000/product/${id}`
+    const ProductDetails = await API.get(`/product/${id}`
     );
     setProductData(ProductDetails?.data?.data);
     setCurrentImage(ProductDetails?.data?.data.productImage[0]);

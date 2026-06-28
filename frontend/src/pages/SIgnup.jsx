@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { FaRegEyeSlash, FaEye } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
 import { toast } from "react-toastify";
 import imageTobase64 from "../helper/image64";
+import API from "../api";
 
 function Signup() {
   const navigate = useNavigate();
@@ -47,8 +47,8 @@ function Signup() {
         picture: data.picture,
         role: data.role,
       };
-      await axios
-        .post("http://localhost:3000/api/Signup", userData)
+      await API
+        .post("/api/Signup", userData)
         .then((res) => {
           toast.success("acc create susscess");
           navigate("/login");

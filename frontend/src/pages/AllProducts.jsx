@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 import UploadProductModal from "../modals/UploadProductModal.jsx";
-import axios from "axios";
+import API from "../api.js";
 import AdminShowProduct from "../components/AdminShowProduct.jsx";
 
 function AllProducts() {
   const [upload_productModal, setUpload_productModal] = useState(false);
   const [productArray, setProductArray] = useState([]);
   const fetchAllProduct = async () => {
-    const products = await axios.get(
-      "http://localhost:3000/product/get_all_products"
-    );
+    const products = await API.get("/product/get_all_products");
     setProductArray(products?.data.data || []);
   };
   useEffect(() => {

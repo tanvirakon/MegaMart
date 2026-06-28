@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { IoMdClose } from "react-icons/io";
-import axios from "axios";
+import API from "../api.js";
 import { toast } from "react-toastify";
 
 const DeleteUserModal = ({ onclose, email }) => {
@@ -11,8 +11,8 @@ const DeleteUserModal = ({ onclose, email }) => {
 
   const deleteUser = async () => {
     try {
-      const response = await axios.delete(
-        `http://localhost:3000/api/delete/${email}`
+      const response = await API.delete(
+        `/api/delete/${email}`
       );
       if (response.data.success) {
         toast.success(response.data.message);

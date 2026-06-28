@@ -1,5 +1,4 @@
 // url e endpoint change krle page kaj kre...bt oita searcch box e thake na
-import axios, { all } from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { TbCurrencyTaka } from "react-icons/tb";
 import { Link, useParams } from "react-router-dom";
@@ -12,7 +11,7 @@ const SearchPage = () => {
   const { category } = useParams();
   const [allProduct, setAllProduct] = useState([]);
   const se = async () => {
-    const a = await axios.get(`http://localhost:3000/search/${category}`);
+    const a = await API.get(`/search/${category}`);
     if (a.data.success) setAllProduct(a.data.data);
     else setAllProduct([]);
   };

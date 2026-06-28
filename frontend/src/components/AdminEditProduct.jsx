@@ -5,7 +5,7 @@ import productCategory from "../helper/productCategory.js";
 import { ImCloudUpload } from "react-icons/im";
 import uploadProductImages from "../helper/uploadProductImages.js";
 import { MdDelete } from "react-icons/md";
-import axios from "axios";
+import API from "../api.js";
 import { toast } from "react-toastify";
 
 const AdminEditProduct = ({ data, onclose, fetchAllProduct }) => {
@@ -49,9 +49,9 @@ const AdminEditProduct = ({ data, onclose, fetchAllProduct }) => {
   };
   const formSubmit = async (e) => {
     e.preventDefault();
-    await axios
+    await API
       .put(
-        `http://localhost:3000/product/update_product/${data._id}`,
+        `/product/update_product/${data._id}`,
         productData
       )
       .then((res) => {

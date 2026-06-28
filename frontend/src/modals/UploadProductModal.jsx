@@ -6,7 +6,6 @@ import productCategory from "../helper/productCategory.js";
 import { ImCloudUpload } from "react-icons/im";
 import uploadProductImages from "../helper/uploadProductImages.js";
 import { MdDelete } from "react-icons/md";
-import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import { useSelector } from "react-redux";
 
@@ -55,8 +54,8 @@ const UploadProductModal = ({ onclose, fetchAllProduct }) => {
     console.log(userInfo.role);
     if (userInfo.role == "seller") {
       if (productData.price >= productData.sellingPrice) {
-        await axios
-          .post("http://localhost:3000/product/upload", productData)
+        await API
+          .post("/product/upload", productData)
           .then((res) => {
             toast.success(res.data.message);
             fetchAllProduct();

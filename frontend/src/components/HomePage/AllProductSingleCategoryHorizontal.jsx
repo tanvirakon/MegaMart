@@ -1,5 +1,5 @@
 // errr
-import axios from "axios";
+import API from "../../api.js";
 import React, { useContext, useRef, useState } from "react";
 import { useEffect } from "react";
 import { TbCurrencyTaka } from "react-icons/tb";
@@ -15,8 +15,7 @@ const AllProductSingleCategoryHorizontal = ({ category, heading }) => {
   const scrollElement = useRef();
   const [data, setData] = useState([]);
   const fetchData = async () => {
-    const allProduct = await axios.get(
-      `http://localhost:3000/product/all-product-single-category/${category}`
+    const allProduct = await API.get(`/product/all-product-single-category/${category}`
     );
     setData(allProduct.data.data);
   };

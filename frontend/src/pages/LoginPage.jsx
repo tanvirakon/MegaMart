@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useContext, useState } from "react";
 import { FaEye, FaRegEyeSlash } from "react-icons/fa";
 import { IoManSharp } from "react-icons/io5";
@@ -6,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import context from "../assets/context/context";
 import addToCart from "../helper/addToCart.js";
+import API from "../api.js";
 
 const LoginPage = ({ heading, onclose }) => {
   const { fetchUserData, fetchProductCountInCart } = useContext(context); //fetchUserData function ta asbe
@@ -32,8 +32,8 @@ const LoginPage = ({ heading, onclose }) => {
       email: data.email,
       password: data.password,
     };
-    const res = await axios.post(
-      "http://localhost:3000/api/canlogin", //login + token generate
+    const res = await API.post(
+      "/api/canlogin", //login + token generate
       loginData,
       { withCredentials: "include" }
     );
